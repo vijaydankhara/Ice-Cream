@@ -33,6 +33,114 @@
   text-decoration: underline;
   background-color: white;
   border:none;
-  Cursor:text !important; 
+  Cursor:text ;
   
+}
+.home{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.shop{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.shop:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+.product{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.product:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+
+.blog{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.blog:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+
+.page{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.page:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+
+
+
+.NavbatTxt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  color:red;
+  transition:0.3s;
+
+  
+}
+
+.NavbatTxt:hover::after {
+  width: 100%;
+}
+
+
+.logo{
+
+    position: relative;
+    margin-left: 1.25rem;
+
+}
+.icone{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color:white;
+  text:black;
+  font-size:12px;
+    line-height:16px;
+    border-radius: 9999px;
+    padding-left:4px;
+    padding-right:4px;
+
+
+
+}
+.iconeNav:hover{
+  font-size:20px;
+    line-height:28px;
+  color:red;
 }
