@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import Shop from './Shop'
 import Home from './Home'
-import AboutUs from './AboutUs'
-import Contact from './Contact'
+import Shop from './Shop'
+import Product from './Product'
+import Blog from './Blog'
+import Page from './Page'
+
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
 
@@ -18,16 +20,20 @@ const PageRouter = createBrowserRouter([
         element:<Home/>
       },
       {
-        path:'/About',
-        element:<AboutUs/>
-      },
-      {
-        path:'/Contact',
-        element:<Contact/>
-      },
-      {
         path:'/Shop',
         element:<Shop/>
+      },
+      {
+        path:'/Product',
+        element:<Product/>
+      },
+      {
+        path:'/Blog',
+        element:<Blog/>
+      },
+      {
+        path:'/Page',
+        element:<Page/>
       },
     ]
   }
