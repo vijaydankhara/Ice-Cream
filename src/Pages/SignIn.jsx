@@ -1,7 +1,7 @@
 import React from "react";
 import LoginImg from "../assets/asset49.jpeg";
 
-function SignUp() {
+function SignIn() {
   return (
     <div>
       <section>
@@ -15,7 +15,7 @@ function SignUp() {
                 alt="Not Found"
               />
               <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl absolute left-10  inset-96 font-serif">
-                Sign up
+                Sign in
               </h2>
             </div>
           </div>
@@ -27,17 +27,17 @@ function SignUp() {
                 <div className="space-y-5">
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="name"
                       className="text-base font-medium text-gray-900"
                     >
                     
                     </label>
                     <div className="mt-2">
                       <input
-                        id="email"
-                        className="flex h-10 w-full border border-gray-300 bg-transparent px-3 py-4 text-base placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 rounded-full"
+                        id="name"
+                        className="flex h-10 w-full border border-gray-300 bg-transparent px-3 py-4 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 rounded-full"
                         type="text"
-                        placeholder="Email*"
+                        placeholder="Name*"
                       />
                     </div>
                   </div>
@@ -46,7 +46,7 @@ function SignUp() {
                     <div className="mt-2">
                       <input
                         id="password"
-                        className="flex h-10 w-full rounded-full border border-gray-300 bg-transparent px-3 py-4 text-base placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-10 w-full rounded-full border border-gray-300 bg-transparent px-3 py-4 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                         type="password"
                         placeholder="Password*"
                       />
@@ -58,26 +58,32 @@ function SignUp() {
                       >
                     
                       </label>
-                     
+                      <a
+                        href="#"
+                        title=""
+                        className="text-sm font-semibold text-black  hover:text-red-600 hover:underline"
+                      >
+                        Forgot password?
+                      </a>
                     </div>
                   </div>
                   <div>
                     <button
                       type="submit"
-                      className="inline-flex w-full items-center justify-center rounded-full bg-black hover:bg-red-600 px-3.5 py-2.5 font-semibold leading-7 text-white "
+                      className="inline-flex w-full items-center justify-center rounded-full bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                     >
-                      Sign Up
+                      Sign in
                       
                     </button>
                   </div>
                   <p className="mt-3 text-sm text-gray-600 text-center">
-                  Already has an account?{" "}
+                  Don't have an account?{" "}
                 <a
                   href="#"
                   title=""
                   className="font-semibold text-black transition-all duration-200 underline hover:underline"
                 >
-                Sign in
+                Sign up
                 </a>
               </p>
                 </div>
@@ -90,4 +96,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignIn;

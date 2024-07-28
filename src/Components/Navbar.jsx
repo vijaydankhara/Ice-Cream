@@ -12,26 +12,19 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#fff] box-border">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between py-6" id="navbar">
-            <div id="logo">
-              <NavLink to="/">
-                <img
-                  src={Weblogo}
-                  alt="Logo"
-                  className=" h-32 w-32 logo md:h-8 md:w-auto  "
-                  style={{ animation: "logo-spin 2s linear infinite" }}
-                />
-              </NavLink>
-            </div>
+      <div className="bg-[#fff] w-full ">
+        <div className="container">
+          <div className="flex items-center justify-between ml-5" id="">
+          <NavLink to="" className="flex items-center rtl:space-x-reverse">
+               <img id='logo' className='size-24' src={Weblogo} alt="Not Found" />
+         </NavLink>
             <div className="hidden md:flex space-x-16">
               <div className="relative">
                 <button
                   onClick={() => toggleMenu("home")}
                   className="NavbatTxt "
                 >
-                  Home
+                  Home &#11163;
                 </button>
                 {activeMenu === "home" && (
                   <ul className="absolute left-0 mt-2 w-48 bg-white text-[#ff6822] shadow-lg rounded-md overflow-hidden">
@@ -116,7 +109,7 @@ const Navbar = () => {
                   onClick={() => toggleMenu("shop")}
                   className="NavbatTxt"
                 >
-                  Shop
+                  Shop &#11163;
                 </button>
                 {activeMenu === "shop" && (
                   <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
@@ -147,7 +140,7 @@ const Navbar = () => {
                   onClick={() => toggleMenu("products")}
                   className="NavbatTxt"
                 >
-                  Products
+                  Products &#11163;
                 </button>
                 {activeMenu === "products" && (
                   <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
@@ -178,7 +171,7 @@ const Navbar = () => {
                   onClick={() => toggleMenu("blog")}
                   className="NavbatTxt"
                 >
-                  Blog
+                  Blog &#11163;
                 </button>
                 {activeMenu === "blog" && (
                   <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
@@ -209,7 +202,7 @@ const Navbar = () => {
                   onClick={() => toggleMenu("page")}
                   className="NavbatTxt"
                 >
-                  Page
+                  Page &#11163;
                 </button>
                 {activeMenu === "page" && (
                   <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
