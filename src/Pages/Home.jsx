@@ -9,7 +9,7 @@ function Home() {
     <div>
       {/* <ProductCard/> */}
       {/* <Footer/> */}
-      <SignIn/>
+      {/* <SignIn/> */}
       <SignUp/>
     </div>
   )
