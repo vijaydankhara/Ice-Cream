@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Weblogo from "../assets/asset0.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import IconBar from "./icone";
+import './Navbar.css'
+import {FaGripVertical, FaHeart, FaSearch, FaUser} from 'react-icons/fa'
 
 
 const Navbar = () => {
@@ -13,13 +15,19 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#fff] w-full ">
+      <div className="bg-[#f4ebe9] w-full h-28 flex justify-around items-center ">
         <div className="container">
           <div className="flex items-center justify-between ml-5">
+
+          <div className="" id="toggelmenuTop">
+              <button onClick={() => toggleMenu("mobile")} className="text-gray-950">
+                ☰
+              </button>
+            </div>
             <NavLink to="/" className="flex items-center rtl:space-x-reverse">
               <img id='logo' className='size-24' src={Weblogo} alt="Not Found" />
             </NavLink>
-            <div className="hidden md:flex space-x-16">
+            <div className="hidden md:flex space-x-16" id="toggle">
               <div
                 className="relative"
                 onMouseEnter={() => toggleMenu("home")}
@@ -109,16 +117,10 @@ const Navbar = () => {
             <div className="flex justify-between items-center">
           <IconBar/>
             </div>
-
-            <div className="md:hidden">
-              <button onClick={() => toggleMenu("mobile")} className="text-white">
-                ☰
-              </button>
-            </div>
           </div>
 
           {activeMenu === "mobile" && (
-            <ul className="md:hidden bg-[#ff6828] text-white text-xl font-bold space-y-4 py-4 px-4">
+            <ul id="toggelmenuTop" className=" bg-[#ff6828] text-white text-xl font-bold space-y-4 py-4 px-4 w-full">
               <li><NavLink to="/" onClick={() => toggleMenu(null)}>Home</NavLink></li>
               <li><NavLink to="/shop" onClick={() => toggleMenu(null)}>Shop</NavLink></li>
               <li><NavLink to="/product" onClick={() => toggleMenu(null)}>Products</NavLink></li>
@@ -127,6 +129,14 @@ const Navbar = () => {
             </ul>
           )}
         </div>
+        
+        <div className="w-full justify-evenly flex fixed bg-yellow-300 h-16 bottom-0" id="toggelHiden">
+        <a className="w-24 h-full flex flex-col justify-center items-center"><FaGripVertical/>Shop</a>
+        <a className="w-24 h-full flex flex-col justify-center items-center"><FaUser/>Account</a>
+        <a className="w-24 h-full flex flex-col justify-center items-center"><FaSearch/>Search</a>
+        <a className="w-24 h-full flex flex-col justify-center items-center"><FaHeart/>Wishlist</a>
+         </div>
+
       </div>
       <Outlet />
     </>

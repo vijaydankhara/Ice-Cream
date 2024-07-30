@@ -173,14 +173,14 @@ body, html {
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
 
-.text-center {
+/* .text-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #333;
-}
+} */
 
 .badge {
   position: absolute;
@@ -211,3 +211,32 @@ body, html {
   font-size: 4rem;
   color: rgba(255, 0, 0, 0.1);
 }
+
+
+/* footer-2 service menu css Start */
+.footerServiceMenu{
+  color:white;
+  list-style-type:disc;
+  font-size:  16px;
+  /* row-gap:50px; */
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+.footerServiceMenu:hover{
+  color:red;
+  
+  /* transition-duration: 0s; */
+  
+}
+.FooterTitle{
+  color:white;
+  size:20px;
+  margin-bottom: 25px;
+  font-size:  24px;
+  line-height:  32px;
+  
+}
+
+
+/* footer-2 service menu css End*/

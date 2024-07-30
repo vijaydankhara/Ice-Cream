@@ -3,7 +3,7 @@ import LoginImg from "../assets/asset49.jpeg";
 import LoginImg2 from "../assets/assetCrop49.jpeg";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 
-function SignUp() {
+function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -92,4 +92,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignIn;

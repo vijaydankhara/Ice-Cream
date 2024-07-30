@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCard from '../Components/Card'
+import ProductItem from '../Components/Card';
 import Footer from '../Components/Footer'
 import SignIn from './SignIn';
 import SignUp from './SingUp';
@@ -8,8 +8,8 @@ import SignUp from './SingUp';
 function Home() {
   return (
     <div>
-      {/* <ProductCard/> */}
-      {/* <Footer/> */}
+      {/* <ProductItem/> */}
+      <Footer/>
       {/* <SignIn/> */}
       {/* <SignUp/> */}
       

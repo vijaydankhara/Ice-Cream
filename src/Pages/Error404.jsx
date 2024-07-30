@@ -10,7 +10,7 @@ function Error404() {
             <div className="col-12">
               <div className="text-center">
                 <h2 className="d-flex justify-content-center align-items-center gap-2 mb-4">
-                  <span className="display-1 fw-bold text-[300px] ">404</span>
+                  <span className="display-1 fw-bold text-[300px]">404</span>
                 </h2>
                 <h3 className="h2 mb-2 text-4xl md:text-5xl max-sm:text-3xl font-serif">
                   Oops! That Page Can't Be Found.
