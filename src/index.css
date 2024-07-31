@@ -240,3 +240,12 @@ body, html {
 
 
 /* footer-2 service menu css End*/
+
+.homeIcecreem{
+  object-fit:cover;
+  outline: 5px solid white;
+  transition: 1s ease;
+}
+.homeIcecreem:hover{
+  transform: scale(1.1);
+}

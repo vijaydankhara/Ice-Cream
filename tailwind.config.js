@@ -8,8 +8,11 @@ export default {
     extend: {
       fontFamily: {
         'sana-seriDm': ['"DM Sans", sans-serif'],
+          'Kalnia': ['"Kalnia", serif'],
+          
 
-      }
+      },
+      
     },
     
   },
