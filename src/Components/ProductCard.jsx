@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaEye, FaHeart } from "react-icons/fa";
+import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaEye } from 'react-icons/fa';
+
 import PaymentMethodImg from "../assets/paymentMethod.png";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
@@ -167,13 +168,20 @@ const ProductCard = () => {
                     href=""
                     className="w-10 h-10 rounded-full flex border mr-1 justify-center items-center text-[#000] hover:text-[#fff] bg-[#fff] hover:bg-[#ff0000]"
                   >
-                    <FaHeart />
+                    <FaShareAlt />
                   </a>
                   <button class=" py-2 px-2 rounded-full text-[#000]">
                     Share
                   </button>
                   
                 </div>
+                
+      <div className='hidden h-14  p-2 z-10 items-center bg-yellow-800 flex flex-row gap-x-2 '>
+      <button class="HomeProductCardMid"><FaShoppingCart/></button>
+      <button class="HomeProductCardMid"><FaHeart/></button>
+      <button class="HomeProductCardMid"><FaSearch/></button>
+      <button class="HomeProductCardMid"><FaShareAlt/></button>
+      </div>
               </div>
 
               {/* icone end */}

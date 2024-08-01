@@ -459,3 +459,42 @@ body, html {
     text-transform: lowercase;
     line-height: 55px;
 }
+
+/* home icone HomeProductCardMid css */
+
+.HomeProductCardMid {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.HomeProductCardMid:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 0.25rem;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.group:hover .tooltip {
+  opacity: 1;
+}

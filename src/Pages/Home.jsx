@@ -8,12 +8,15 @@ import img18 from "../assets/asset18.jpeg";
 import img19 from "../assets/asset19.jpeg";
 import Footer from "../Components/Footer";
 import IceCreamCard from "../Components/HomeCards";
+import HomeProductCardMid from "../Components/Card";
+import Pagination from "../Components/Pagination";
+import ArticleCard from "../Components/ArticleCard ";
 
 const Home = () => {
   return (
     <>
       <div
-        className="w-full h-[800px] flex justify-center items-center gap-11 "
+        className="w-full h-[800px] flex justify-center items-center gap-11"
         id="slider"
       >
         <div className="w-[500px] h-[350px] mt-20">
@@ -147,7 +150,16 @@ const Home = () => {
       </div>
       <br />
       <br />
+
+      <div class="title-block text-center font-Kalnia font-semibold text-[45px] text-[#000] mb-5">
+        <h2>Best Ice Cream Shops</h2>
+      </div>
+
+      <HomeProductCardMid />
       <IceCreamCard />
+      <Pagination />
+      <ArticleCard/>
+      <br />
       <Footer />
     </>
   );
