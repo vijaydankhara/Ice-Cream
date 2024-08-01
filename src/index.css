@@ -330,7 +330,7 @@ body, html {
 } */
 
 #slider {
-  background-image: url('./assets/slider1-bg.jpg');
+  background-image: url('./assets/bg-1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -350,6 +350,9 @@ body, html {
   font-size: 20px;
   border-radius: 40px;
 }
+.home-bt-shop:hover {
+  background-color: black;
+}
 
 .home-bt2-shop {
   background-color: black;
@@ -359,6 +362,9 @@ body, html {
   font-size: 20px;
   border-radius: 40px;
   margin-left: 20px;
+}
+.home-bt2-shop:hover {
+  background-color: red;
 }
 
 
@@ -383,7 +389,7 @@ body, html {
 
 #spin-text {
   line-height: 28px;
-  color: wheat;
+  color: white;
   margin-left: -85px;
   z-index: 1;
   font-weight: 700;
@@ -395,6 +401,7 @@ body, html {
   background-image: url('./assets/asset6.png');
   background-size: cover;
   border-radius: 100%;
+  margin-top: 150px;
 }
 
 .div2-text {
