@@ -249,3 +249,206 @@ body, html {
 .homeIcecreem:hover{
   transform: scale(1.1);
 }
+
+/* foter css start */
+.custom-search { 
+  position: relative; 
+  width: 600px; 
+} 
+.custom-search-input { 
+  width: 100%; 
+  border: 1px solid #ccc; 
+  border-radius: 100px; 
+  padding: 10px 100px 10px 20px;  
+  line-height: 1; 
+  box-sizing: border-box; 
+  color: #000;
+  outline: none; 
+  
+} 
+.custom-search-botton { 
+  position: absolute; 
+  right: 3px;  
+  top: 3px; 
+  bottom: 3px; 
+  border: 0; 
+  background: #ff0000; 
+  color: #fff; 
+  outline: none; 
+  margin: 0; 
+  padding: 0 10px; 
+  border-radius: 100px; 
+  z-index: 2; 
+} 
+/* foter end css */
+
+
+/* home page */
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+#slider {
+  background-image: url('./assets/slider1-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Nav-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 58px;
+}
+
+.home-bt-shop {
+  background-color: red;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+.home-bt2-shop {
+  background-color: black;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+
+
+.spin_of {
+  /* background-size: cover; */
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(30deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spin-text {
+  line-height: 28px;
+  color: wheat;
+  margin-left: -85px;
+  z-index: 1;
+  font-weight: 700;
+}
+
+#good-root {
+  width: 130px;
+  height: 130px;
+  background-image: url('./assets/asset6.png');
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.div2-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 65px;
+  color: red;
+}
+
+.info {
+  line-height: 25px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.div21-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 65px;
+  color: red;
+  margin-left: 10px;
+}
+
+.flip-vertical-right {
+  animation: flip-vertical-right;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+
+@keyframes flip-vertical-right {
+  0% {
+    transform: rotateY(0);
+  }
+  30% {
+    transform: rotateY(50deg);
+  }
+
+  60% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(-50deg);
+  }
+}
+
+.hello-heading {
+    /* color: #fff; */
+    font-family: "Playball", Sans-serif;
+    font-size: 50px;
+    text-transform: lowercase;
+    line-height: 55px;
+}
