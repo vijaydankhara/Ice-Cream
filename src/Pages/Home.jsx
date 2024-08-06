@@ -11,16 +11,18 @@ import SliderHome from "../Components/SliderHome";
 import IceCreamCard from "../Components/HomeCards";
 import HomeProductCardMid from "../Components/Card";
 import Pagination from "../Components/Pagination";
+import HomeSecondSlider from "../Components/HomeSecondSlider";
 import ArticleCard from "../Components/ArticleCard ";
-// import SweewtDay from "../Components/SweewtDay";
-import SweetDayComponent from "../Components/SweetDayComponent";
-import Faq2 from "./Faq-2";
+
 import AboutSlider from "../Components/AboutSlider";
 import Manufacture from "../Components/ManufactureAbout";
 import StatsSection from "../Components/StatsSection";
 import ManufactureAbout2 from "../Components/ManufactureAbout2";
 import TestimonialCard from "../Components/TestimonialCard";
 
+import ContactSlider from "../Components/ContactSlider";
+import Map from "../Components/Map";
+import GetInTouch from "../Components/GetInTouch";
 
 
 const Home = () => {
@@ -28,6 +30,10 @@ const Home = () => {
     <>
     {/* <Faq2/> */}
     <AboutSlider/>
+    <ContactSlider/>
+    <Map/>
+    <GetInTouch/>
+
     <Manufacture/>
     <StatsSection/>
     <ManufactureAbout2/>
@@ -35,7 +41,7 @@ const Home = () => {
     <br />
     <ArticleCard />
     <br />
-    <SweetDayComponent/>
+    
     {/* <SweewtDay/> */}
       <SliderHome />
 
@@ -114,6 +120,7 @@ const Home = () => {
       <HomeProductCardMid />
       <IceCreamCard />
       <Pagination />
+      <HomeSecondSlider/>
       <ArticleCard />
       <br />
       <Footer />

@@ -517,3 +517,70 @@ body, html {
 .ManufactureImg:hover{
   transform: scale(1.1);
 }
+
+
+/* Second Slide In Home Page Start */
+#Home-slider-main-com {
+  background-image: url('./assets/asset52.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-font {
+  font-family: Kalnia;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+#texed {
+  font-family: Kalnia;
+  font-size: 20px;
+}
+
+#home-slider-button:hover {
+  background-color: #ff0000;
+  color: white;
+  transition-duration: 1s;
+}
+
+#home-slider-2 {
+  line-height: 40px;
+  font-weight:500;
+  font-family: Kalnia;
+}
+/* Second Slide In Home Page End */
+
+/* Map */
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.map-h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.google-map {
+  height: 500px;
+  width: 100%;
+}
+
+.pin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+
+.pin-icon {
+  font-size: 30px; /* Adjust based on the icon library you use */
+}
+
+.pin-text {
+  margin-top: 10px;
+}

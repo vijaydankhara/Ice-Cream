@@ -1,5 +1,5 @@
 import React from 'react';
-import Footerlogo from "../assets/asset0.svg";
+import FooterlogoWhite from "../assets/asset48.svg";
 import { BiLogoBehance } from "react-icons/bi";
 import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 
@@ -27,7 +27,7 @@ function Footer() {
         <div className="pt-32 md:mt-0 flex justify-between items-center">
           <div className="flex left-0 space-x-5 items-center">
             <div className="mb-1 ">
-              <img id='logo' className='w-24 text-white' src={Footerlogo} alt="Logo" />
+              <img id='logo' className='w-24 text-white' src={FooterlogoWhite} alt="Logo" />
             </div>
             <p className="text-base text-white text-center sm:text-left">
               &copy; 2024 – Jumys. All Rights Reserved.

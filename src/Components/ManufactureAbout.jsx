@@ -11,13 +11,13 @@ const Manufacture = () => {
         <p className="text-gray-500 text-lg mb-6">
           Once The Ingredients Have Cooled Enough, It’s Time To Pour Them Into Molds And Freeze In A Brine Bath. After That, The Ice Cream Sticks Are Dried And Packaged In The Freezer In Square Boxes. From Here, This Cool Ice Cream Is Ready To Be Delivered To Visitors...
         </p>
-        <button className="bg-[#ff0000] hover:bg-[#000] text-white px-8 py-3 rounded-full flex items-center">
+        <button className="bg-[#ff0000] hover:bg-[#000] text-white px-8 py-3 rounded-full flex items-center duration-700">
           View More <span className="ml-2"> <ArrowRight/></span>
         </button>
        
       </div>
-      <div className="md:w-1/2 mt-10 md:mt-0 md:ml-10">
-        <img src={iceCreamImage} alt="Ice Cream" className="w-full h-auto ManufactureImg" />
+      <div className="h-96 overflow-hidden  w-1/2">
+        <img src={iceCreamImage} alt="Ice Cream" className="w-full h-96  ManufactureImg" />
       </div>
     </div>
   );

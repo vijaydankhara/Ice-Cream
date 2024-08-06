@@ -5,6 +5,7 @@ import Shop from './Shop'
 import Product from './Product'
 import Blog from './Blog'
 import Page from './Page'
+import Contact from './Contact'
 
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
@@ -30,6 +31,14 @@ const PageRouter = createBrowserRouter([
       {
         path:'/Blog',
         element:<Blog/>
+      },
+      {
+        path:'/contact',
+        element:<Contact/>
+      },
+      {
+        path:'/Page',
+        element:<Page/>
       },
       {
         path:'/Page',

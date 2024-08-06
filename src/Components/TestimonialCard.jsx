@@ -7,10 +7,9 @@ import avtar4 from "../assets/avatar4.jpg";
 const TestimonialCard = () => {
   return (
     <div className="flex justify-center space-x-6 mx-5">
-    
       {/* 1st card */}
-      <div className="flex flex-col  items-center p-6 bg-[#faf2e7] rounded-lg shadow-md max-w-md">
-        <div className="flex justify-center  items-center gap-x-6 mb-4">
+      <div className="flex flex-col  text-center justify-center items-center p-6 bg-[#faf2e7]  shadow-md max-w-96 h-[300px]">
+        <div className="flex justify-center  items-center gap-x-6 mb-4 ">
           <div>
             <img
               className="w-28 h-28 rounded-full  outline outline-white"
@@ -23,14 +22,16 @@ const TestimonialCard = () => {
             <p className="text-gray-600">Photographer</p>
           </div>
         </div>
-        <p className="text-center text-gray-800">
-          “I absolutely love this place! The variety of flavors is impressive,
-          and each scoop is packed with deliciousness....
-        </p>
+        <div>
+          <p className="flex justify-center items-center text-center text-gray-700 font-bold">
+            “I Absolutely love this place! The variety of flavors is impressive,
+            and each scoop is packed with deliciousness....
+          </p>
+        </div>
       </div>
       {/* 2nd card */}
-      <div className="flex flex-col items-center p-6 bg-[#faf2e7] rounded-lg shadow-md max-w-md">
-        <div className="flex justify-center items-center gap-x-6 mb-4">
+      <div className="flex flex-col text-center justify-center items-center p-6 bg-[#faf2e7]  shadow-md max-w-96 h-[300px]">
+        <div className="flex justify-center  items-center gap-x-6 mb-4">
           <div>
             <img
               className="w-28 h-28 rounded-full  outline outline-white"
@@ -43,14 +44,14 @@ const TestimonialCard = () => {
             <p className="text-gray-600">CEO & Founder</p>
           </div>
         </div>
-        <p className="text-center text-gray-800">
+        <p className="flex justify-center items-center text-center text-gray-700 font-bold">
           “A great company to buy from. Excellent quality products at good
           value. Delivery is efficient and quick.”
         </p>
       </div>
       {/* 3rd card */}
-      <div className="flex flex-col items-center p-6 bg-[#faf2e7] rounded-lg shadow-md max-w-md">
-        <div className="flex justify-center items-center gap-x-6 mb-4">
+      <div className="flex flex-col text-center justify-center items-center p-6 bg-[#faf2e7]  shadow-md max-w-96 h-[300px]">
+        <div className="flex justify-center  items-center gap-x-6 mb-4">
           <div>
             <img
               className="w-28 h-28 rounded-full  outline outline-white"
@@ -63,15 +64,15 @@ const TestimonialCard = () => {
             <p className="text-gray-600">Designer</p>
           </div>
         </div>
-        <p className="text-center text-gray-800">
+        <p className="flex justify-center items-center text-center text-gray-700 font-bold">
           “ I have never been disappointed, either for myself or as gifts, the
           pieces are lovely, reasonably...
         </p>
       </div>
 
-      {/* 4th card
-      <div className="flex flex-col items-center p-6 bg-[#faf2e7] rounded-lg shadow-md max-w-md">
-        <div className="flex justify-center items-center gap-x-6 mb-4">
+      {/* 4th card */}
+  {/* <div className="flex flex-col  text-center justify-center items-center p-6 bg-[#faf2e7]  shadow-md max-w-96 h-[300px]">
+        <div className="flex justify-center  items-center gap-x-6 mb-4 ">
           <div>
             <img
               className="w-28 h-28 rounded-full  outline outline-white"
@@ -84,10 +85,11 @@ const TestimonialCard = () => {
             <p className="text-gray-600">Designer</p>
           </div>
         </div>
-        <p className="text-center text-gray-700">
+        <p className="flex justify-center items-center text-center text-gray-700 font-bold">
         “ I have never been disappointed, either for myself or as gifts, the pieces are lovely, reasonably...
         </p>
       </div> */}
+
     </div>
   );
 };

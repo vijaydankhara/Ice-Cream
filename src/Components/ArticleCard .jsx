@@ -70,11 +70,13 @@ const ArticleCard = () => {
             key={index}
             className="max-w-sm mx-2 bg-[#ffffff] overflow-hidden "
           >
+            <div className="overflow-hidden w-[95%]">
             <img
-              className="w-[95%] h-60 object-cover homeIcecreem"
+              className="w-full h-60 object-cover homeIcecreem"
               src={article.image}
               alt={article.title}
             />
+            </div>
 
             <div className="py-4">
               <div className="text-gray-500 text-sm font-medium">

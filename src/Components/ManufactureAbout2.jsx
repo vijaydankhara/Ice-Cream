@@ -11,13 +11,13 @@ const ManufactureAbout2 = () => {
         <p className="text-gray-500 text-lg mb-6">
         On hot summer days like today, in addition to a glass of cool beverage, a glass of ice cream can also help relieve some of the heat. Ice cream is popular not only among children but also loved by many people of many different ages…
         </p>
-        <button className="bg-[#ff0000] hover:bg-[#000] text-white px-8 py-3 rounded-full flex items-center">
+        <button className="bg-[#ff0000] hover:bg-[#000] text-white px-8 py-3 rounded-full flex items-center duration-700">
           View More <span className="ml-2"> <ArrowRight/></span>
         </button>
        
       </div>
-      <div className="md:w-1/2 mt-10 md:mt-0 md:ml-10">
-        <img src={iceCreamImage} alt="Ice Cream" className="w-full h-auto ManufactureImg" />
+      <div className="h-96 overflow-hidden  w-1/2">
+        <img src={iceCreamImage} alt="Ice Cream" className="w-full h-96 ManufactureImg" />
       </div>
     </div>
   );
