@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ShopList from './ShopList';
 
 function Shop() {
   useEffect(() => {
@@ -7,9 +8,7 @@ function Shop() {
 
   return (
     <div>
-      <h1 className='bg-[#eeeb40] text-center text-6xl font-semibold text-white h-screen items-center'>
-        This is a Shop Page
-      </h1>
+<ShopList/>
     </div>
   );
 }

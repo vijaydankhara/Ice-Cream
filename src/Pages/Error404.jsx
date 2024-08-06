@@ -18,7 +18,7 @@ function Error404() {
                 <p className="mb-5 text-lg md:text-base">
                   We're Really Sorry But We Can't Seem To Find The Page You Were Looking For.
                 </p>
-                <a className="btn bsb-btn-5xl text-white bg-[#000000] hover:bg-[#e10914] rounded-pill px-5 py-3 m-0" href="/" role="button">
+                <a className="btn bsb-btn-5xl text-white bg-[#000000] hover:bg-[#e10914]  duration-700 rounded-pill px-5 py-3 m-0" href="/" role="button">
                   Back to Homepage
                 </a>
               </div>
