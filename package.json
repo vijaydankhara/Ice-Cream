@@ -15,6 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "flowbite-react": "^0.10.1",
     "lucide-react": "^0.417.0",
     "mdb-react-ui-kit": "^8.0.0",
@@ -26,7 +27,9 @@
     "react-locomotive-scroll": "^0.2.2",
     "react-medium-image-zoom": "^5.2.8",
     "react-router-dom": "^6.25.1",
+    "react-slick": "^0.30.2",
     "react-social-icons": "^6.17.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.12"
   },
   "devDependencies": {

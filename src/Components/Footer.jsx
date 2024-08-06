@@ -1,5 +1,6 @@
 import React from 'react';
 import Footerlogo from "../assets/asset0.svg";
+import { BiLogoBehance } from "react-icons/bi";
 import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
@@ -15,7 +16,7 @@ function Footer() {
 
 
           <div class="custom-search font-Kalnia"> 
-  <input type="text" class="custom-search-input" placeholder="Your Email..."/> 
+  <input type="text" class="custom-search-input py-3 " placeholder="Your Email..."/> 
   <button class="custom-search-botton font-Kalnia" type="submit">Subscribe</button>   
 </div>
 
@@ -37,7 +38,7 @@ function Footer() {
             <a className="text-2xl cursor-pointer"><FaUser/></a>
             <a className="text-2xl cursor-pointer"><FaYoutube/></a>
             <a className="text-2xl cursor-pointer"><FaInstagram/></a>
-            <a className="text-2xl cursor-pointer"><FaBeer/></a>
+            <a className="text-2xl cursor-pointer"><BiLogoBehance/></a>
           </div>
         </div>
       </div>

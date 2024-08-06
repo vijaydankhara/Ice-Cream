@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import assent1 from '../assets/asset1.jpeg';
-import assent2 from '../assets/asset2.jpeg';
-import assent3 from '../assets/asset3.jpeg';
-import assent45 from '../assets/asset45.jpeg';
-import assent46 from '../assets/asset46.jpeg';
-import assent47 from '../assets/asset47.jpeg';
+import assent1 from "../assets/asset1.jpeg";
+import assent2 from "../assets/asset2.jpeg";
+import assent3 from "../assets/asset3.jpeg";
+import assent45 from "../assets/asset45.jpeg";
+import assent46 from "../assets/asset46.jpeg";
+import assent47 from "../assets/asset47.jpeg";
 
 const ArticleCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,29 +47,34 @@ const ArticleCard = () => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + articles.length) % articles.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + articles.length) % articles.length
+    );
   };
 
-  const visibleArticles = articles.slice(currentIndex, currentIndex + 3).concat(
-    articles.slice(0, Math.max(0, currentIndex + 3 - articles.length))
-  );
+  const visibleArticles = articles
+    .slice(currentIndex, currentIndex + 3)
+    .concat(articles.slice(0, Math.max(0, currentIndex + 3 - articles.length)));
 
   return (
-    <div className='flex items-center'>
+    <div className="flex items-center justify-around">
       <button
         className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full w-10 h-10 ml-2 p-2 shadow text-gray-950 hover:text-gray-100"
         onClick={handlePrev}
       >
         <FaArrowLeft />
       </button>
-      <div className='flex overflow-hidden'>
+      <div className="flex overflow-hidden">
         {visibleArticles.map((article, index) => (
-          <div key={index} className="max-w-sm mx-2 bg-[#ffffff] overflow-hidden">
-          <img
-  className="w-[95%] h-60 object-cover  duration-1000 ease-in-out transform hover:scale-105"
-  src={article.image}
-  alt={article.title}
-/>
+          <div
+            key={index}
+            className="max-w-sm mx-2 bg-[#ffffff] overflow-hidden "
+          >
+            <img
+              className="w-[95%] h-60 object-cover homeIcecreem"
+              src={article.image}
+              alt={article.title}
+            />
 
             <div className="py-4">
               <div className="text-gray-500 text-sm font-medium">
@@ -78,7 +83,6 @@ const ArticleCard = () => {
               </div>
               <h2 className="text-xl mt-2 font-semibold text-[#000] hover:text-[#ff0000]">
                 {article.title}
-                
               </h2>
             </div>
           </div>

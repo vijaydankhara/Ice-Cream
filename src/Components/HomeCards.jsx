@@ -98,7 +98,7 @@ const IceCreamCard = () => {
           butter to create surprisingly...
         </p>
         <div className="flex justify-center">
-        <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
+        <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition ">
             <FaArrowRight/>
           </button>                           
         </div>

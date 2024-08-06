@@ -1,4 +1,5 @@
 import React from "react";
+import { BiLogoBehance } from "react-icons/bi";
 import {
   MDBFooter,
   MDBContainer,
@@ -83,7 +84,7 @@ function Footer2() {
           <a className="text-2xl cursor-pointer"><FaUser/></a>
           <a className="text-2xl cursor-pointer"><FaYoutube/></a>
           <a className="text-2xl cursor-pointer"><FaInstagram/></a>
-          <a className="text-2xl cursor-pointer"><FaBeer/></a>
+          <a className="text-2xl cursor-pointer"><BiLogoBehance/></a>
         </div>
       </div>
     </MDBFooter>

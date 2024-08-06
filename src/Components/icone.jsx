@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser, faHeart, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const IconBar = () => {
+const IconBars = () => {
   return (
     <div className="flex items-center space-x-6 mr-5">
       <div className="relative" id="icon1">
@@ -23,4 +23,4 @@ const IconBar = () => {
   );
 };
 
-export default IconBar;
+export default IconBars;

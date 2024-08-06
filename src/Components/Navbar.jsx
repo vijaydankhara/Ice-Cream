@@ -6,6 +6,7 @@ import './Navbar.css'
 import {FaGripVertical, FaHeart, FaSearch, FaUser} from 'react-icons/fa'
 
 
+
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#f4ebe9] w-full h-28 flex justify-around items-center fixed z-50">
+      <div className="bg-[#fff] w-full h-28 flex justify-around items-center z-50 ">
         <div className="container">
           <div className="flex items-center justify-between ml-5">
 
@@ -37,7 +38,7 @@ const Navbar = () => {
                   Home &#11163;
                 </button>
                 {activeMenu === "home" && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-[#ff6822] shadow-lg rounded-md overflow-hidden">
+                  <ul className="absolute left-0 w-48 bg-white text-[#ff6822] shadow-lg rounded-md overflow-hidden">
                     <li><NavLink to="/" className="home" onClick={() => toggleMenu(null)}>Home1</NavLink></li>
                     <li><NavLink to="/" className="home" onClick={() => toggleMenu(null)}>Home2</NavLink></li>
                     <li><NavLink to="/" className="home" onClick={() => toggleMenu(null)}>Home3</NavLink></li>
@@ -60,8 +61,9 @@ const Navbar = () => {
                 </button>
                 {activeMenu === "shop" && (
                   <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
-                    <li><NavLink to="/shop" className="shop" onClick={() => toggleMenu(null)}>Shop1</NavLink></li>
-                    <li><NavLink to="/shop" className="shop" onClick={() => toggleMenu(null)}>Shop2</NavLink></li>
+                    <li><NavLink to="/shopList" className="shop" onClick={() => toggleMenu(null)}>Shop List</NavLink></li>
+                    <li><NavLink to="/login" className="shop" onClick={() => toggleMenu(null)}>Login</NavLink></li>
+                    <li><NavLink to="/wishlist" className="page" onClick={() => toggleMenu(null)}>Wishlist</NavLink></li>
                   </ul>
                 )}
               </div>
@@ -75,9 +77,9 @@ const Navbar = () => {
                   Products &#11163;
                 </button>
                 {activeMenu === "products" && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
-                    <li><NavLink to="/product" className="product" onClick={() => toggleMenu(null)}>Product1</NavLink></li>
-                    <li><NavLink to="/product" className="product" onClick={() => toggleMenu(null)}>Product2</NavLink></li>
+                  <ul className="absolute left-0  w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
+                    <li><NavLink to="/product" className="product" onClick={() => toggleMenu(null)}>Product</NavLink></li>
+               
                   </ul>
                 )}
               </div>
@@ -91,9 +93,9 @@ const Navbar = () => {
                   Blog &#11163;
                 </button>
                 {activeMenu === "blog" && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
-                    <li><NavLink to="/blog" className="blog" onClick={() => toggleMenu(null)}>Blog1</NavLink></li>
-                    <li><NavLink to="/blog" className="blog" onClick={() => toggleMenu(null)}>Blog2</NavLink></li>
+                  <ul className="absolute left-0 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
+                    <li><NavLink to="/blog" className="blog" onClick={() => toggleMenu(null)}>Blog Card</NavLink></li>
+                   
                   </ul>
                 )}
               </div>
@@ -107,9 +109,11 @@ const Navbar = () => {
                   Page &#11163;
                 </button>
                 {activeMenu === "page" && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
-                    <li><NavLink to="/page" className="page" onClick={() => toggleMenu(null)}>Page1</NavLink></li>
-                    <li><NavLink to="/page" className="page" onClick={() => toggleMenu(null)}>Page2</NavLink></li>
+                  <ul className="absolute left-0 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
+                    <li><NavLink to="/aboutUs" className="page" onClick={() => toggleMenu(null)}>About Us</NavLink></li>
+                    <li><NavLink to="/contact" className="page" onClick={() => toggleMenu(null)}>Contact</NavLink></li>
+                    <li><NavLink to="/faq2" className="page" onClick={() => toggleMenu(null)}>Faq 2</NavLink></li>
+                    <li><NavLink to="/page404" className="page" onClick={() => toggleMenu(null)}>Page 404</NavLink></li>
                   </ul>
                 )}
               </div>
