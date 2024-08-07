@@ -125,10 +125,7 @@ const Home = () => {
       <HomeSecondSlider />
       <IceCreamCard />
 
-      <div className="items-center text-center my-7">
-        <h2 className="text-3xl text-[#ff0000]">Our News</h2>
-        <h1 className="text-6xl text-[#000] font-serif">Tastiest Updates</h1>
-      </div>
+ 
       <ArticleCard />
 
       <Footer />

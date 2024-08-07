@@ -33,8 +33,8 @@ function Contact() {
 <Map/>
 
 {/* Get Informations */}
-<div className="mt-5 flex flex-row w-full items-center justify-center p-4 border-2 border-red-600">
-      <div className="w-full h-[480px] border-2 border-red-800 px-5">
+<div className="mt-5 flex flex-row w-full items-center justify-center p-4">
+      <div className="w-full h-[480px] px-5">
         <div className="lg:col-span-1">
           <h2 className="text-3xl font-bold font-serif mb-4">Get In Touch</h2>
           <div className="grid gap-1 text-lg font-serif">
@@ -88,7 +88,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className=" w-full h-[480px] border-2 border-green-600">
+      <div className=" w-full h-[480px] ">
         <form className="w-full ">
           <div className="flex w-full">
             <div className="mb-4">
@@ -121,7 +121,7 @@ function Contact() {
             ></textarea>
           </div>
           <div className="">
-            <button className="px-10 py-3 bg-[#ff0000] hover:bg-[#000] text-[#fff]  duration-500 font-bold rounded-full">
+            <button className="px-10 py-3 bg-[#ff0000] hover:bg-[#000] text-[#fff]  duration-700 font-bold rounded-full">
               Send Message
             </button>
           </div>

@@ -1,4 +1,7 @@
-import React from "react";
+
+import React, { useState } from 'react';
+import { Pagination, Stack } from '@mui/material';
+
 import FilterComponent from "../Components/FilterComponent";
 import ProductCardProductList from "../Components/ProductCardProductList";
 import Footer from "../Components/Footer";
@@ -37,7 +40,12 @@ const ShopList = () => {
 <ProductCardProductList/>
     </div>
 
-
+</div>
+{/* Pagination */}
+<div className="flex my-5 justify-center">
+  <Stack spacing={2}>
+    <Pagination count={3} variant="outlined" color="primary" className="custom-pagination" />
+  </Stack>
 
 </div>
 <Footer/>

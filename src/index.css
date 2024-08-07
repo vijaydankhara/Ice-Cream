@@ -289,6 +289,12 @@ body, html {
 /* foter end css */
 
 
+.custom-pagination .MuiPaginationItem-root:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+
 /* home page */
 
 
