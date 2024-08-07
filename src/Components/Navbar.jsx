@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#fff] w-full h-28 flex justify-around items-center z-50 ">
+      <div className="bg-[#fff] w-full h-28 flex justify-around items-center z-50  sticky top-0">
         <div className="container">
           <div className="flex items-center justify-between ml-5">
             <div className="" id="toggelmenuTop">
