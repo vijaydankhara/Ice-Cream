@@ -1,20 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 import backgroundImage from "../assets/asset50.jpeg";
-import { FaUser, FaArrowUp, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import Footer2 from '../Components/Footer2';
 
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showRegisterPassword, setShowRegisterPassword] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const toggleRegisterPasswordVisibility = () => {
-    setShowRegisterPassword(!showRegisterPassword);
+    setPasswordVisible(!passwordVisible);
   };
 
 
@@ -41,90 +36,163 @@ const Login = () => {
       </div>
 
 {/* Login Forms */}
-<div className='flex space-x-4'>
-      <div className="max-w-md mx-auto p-8 space-y-6 border rounded-lg shadow-md">
-        <div className="flex items-center space-x-2 text-lg font-bold">
+<div className="flex justify-center gap-x-5 w-full p-10  mt-10">
+
+      {/* Login */}
+      <div className="p-6 bg-white border border-gray-500 w-1/2">
+        <div className="flex justify-center text-2xl gap-x-2 underline">
           <FaUser />
-          <span>Login</span>
+          <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">
+            Login
+          </h2>
         </div>
-        <hr className="border-t-2 border-black w-full" />
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
+        <form>
+          <div className="mb-4">
+            <label className="block mb-2 text-sm text-gray-500">
               Username Or Email Address <span className="text-red-500">*</span>
             </label>
             <input
+              className="w-full px-3 py-3 leading-tight text-gray-700 border rounded-full appearance-none focus:outline-none focus:shadow-outline"
+              id="username"
               type="text"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+              required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
+          <div className="mb-4">
+            <label className="block mb-2 text-sm text-gray-500">
               Password <span className="text-red-500">*</span>
             </label>
             <div className="relative">
               <input
-                type={showPassword ? 'text' : 'password'}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                className="w-full px-3 py-3 leading-tight text-gray-700 border rounded-full appearance-none focus:outline-none focus:shadow-outline"
+                id="password"
+                type={passwordVisible ? "text" : "password"}
+                required
               />
-              <div className="absolute top-2.5 right-3 cursor-pointer" onClick={togglePasswordVisibility}>
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
-              </div>
+              <button
+                type="button"
+                className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
+                onClick={togglePasswordVisibility}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.172.527-.376 1.032-.606 1.5M15 12a3 3 0 01-6 0"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-          <div className="flex items-center justify-between">
-            <label className="flex items-center">
-              <input type="checkbox" className="h-4 w-4 text-black border-gray-300 rounded" />
-              <span className="ml-2 text-sm text-gray-700">Remember Me</span>
-            </label>
-            <a href="#" className="text-sm text-gray-700">Lost Your Password?</a>
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <input
+                className="mr-2 leading-tight"
+                type="checkbox"
+                id="rememberMe"
+              />
+              <label className="text-sm text-gray-700 mr-2" htmlFor="rememberMe">
+                Remember Me
+              </label>
+            </div>
+            <a
+              className="inline-block text-sm font-bold text-blue-500 align-baseline hover:text-blue-800"
+              href="#"
+            >
+              Lost Your Password?
+            </a>
           </div>
-          <button
-            type="submit"
-            className="w-full py-2 text-white bg-black rounded-md hover:bg-gray-800"
-          >
-            LOGIN
-          </button>
+          <div className="flex items-center justify-center">
+            <button
+              className="w-full px-4 py-2 font-bold text-white bg-[#000] rounded-full hover:bg-[#ff0000] duration-700 focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              LOGIN
+            </button>
+          </div>
         </form>
       </div>
 
-      <div className="max-w-md mx-auto p-8 space-y-6 border rounded-lg shadow-md">
-        <div className="flex items-center space-x-2 text-lg font-bold">
-          <FaArrowUp />
-          <span>Register</span>
+      {/* Register */}
+      <div className="p-6 bg-white border border-gray-500 w-1/2">
+        <div className="flex justify-center text-2xl gap-x-2 underline">
+          <FaUser />
+          <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">
+            Register
+          </h2>
         </div>
-        <hr className="border-t-2 border-black w-full" />
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Email Address <span className="text-red-500">*</span>
+        <form>
+          <div className="mb-4">
+            <label className="block mb-2 text-sm text-gray-500">
+            Email Address <span className="text-red-500">*</span>
             </label>
             <input
-              type="email"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+              className="w-full px-3 py-3 leading-tight text-gray-700 border rounded-full appearance-none focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
+          <div className="mb-4">
+            <label className="block mb-2 text-sm text-gray-500">
               Password <span className="text-red-500">*</span>
             </label>
             <div className="relative">
               <input
-                type={showRegisterPassword ? 'text' : 'password'}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                className="w-full px-3 py-3 leading-tight text-gray-700 border rounded-full appearance-none focus:outline-none focus:shadow-outline"
+                id="password"
+                type={passwordVisible ? "text" : "password"}
+                required
               />
-              <div className="absolute top-2.5 right-3 cursor-pointer" onClick={toggleRegisterPasswordVisibility}>
-                {showRegisterPassword ? <FaEyeSlash /> : <FaEye />}
-              </div>
+              <button
+                type="button"
+                className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
+                onClick={togglePasswordVisibility}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.172.527-.376 1.032-.606 1.5M15 12a3 3 0 01-6 0"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-          <button
-            type="submit"
-            className="w-full py-2 text-white bg-gray-500 rounded-md cursor-not-allowed"
-            disabled
-          >
-            REGISTER
-          </button>
+          <div className="flex items-center justify-center">
+            <button
+              className="w-full px-4 py-2 font-bold text-white bg-gray-400 rounded-full hover:bg-[#ff0000] duration-700 focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              REGISTER
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -136,3 +204,9 @@ const Login = () => {
 }
 
 export default Login
+
+
+
+
+
+
