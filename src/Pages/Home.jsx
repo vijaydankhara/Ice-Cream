@@ -11,10 +11,12 @@ import HomeSecondSlider from "../Components/HomeSecondSlider";
 import IceCreamCard from "../Components/HomeCards";
 import ArticleCard from "../Components/ArticleCard ";
 import Footer from "../Components/Footer";
+import Top from "../Components/Top";
 
 const Home = () => {
   return (
     <>
+    <Top/>
       <SliderHome />
       <div className="flex gap-20 justify-around items-center h-[500px]">
         <div>

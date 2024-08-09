@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer2 from '../Components/Footer2';
 
 function Error404() {
   return (
@@ -26,6 +27,7 @@ function Error404() {
           </div>
         </div>
       </section>
+    <Footer2/>
     </div>
   );
 }

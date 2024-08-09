@@ -1,7 +1,11 @@
 import React from "react";
-import backgroundImage from '../assets/asset50.jpeg';
-import MarketingTipsCard from "../Components/MarketingTipsCard";
 import Footer2 from "../Components/Footer2";
+import BlogCard from "../Components/BlogCard";
+import backgroundImage from "../assets/asset50.jpeg";
+import img1 from "../assets/asset1.jpeg";
+import img2 from "../assets/asset2.jpeg";
+import img3 from "../assets/asset3.jpeg";
+// import img4 from "../assets/asset47.jpeg";
 
 function Blog() {
   return (
@@ -11,7 +15,7 @@ function Blog() {
         <img
           src={backgroundImage}
           alt="About Us Background"
-          className="w-full h-full object-cover"
+          className="w-full h-[390px] object-cover"
         />
         <div className="absolute inset-0  flex items-center justify-center">
           <div className="text-center text-white">
@@ -27,7 +31,15 @@ function Blog() {
         </div>
       </div>
 
-<MarketingTipsCard/>
+   <div className="w-full flex  justify-center gap-x-10 my-5">
+      <BlogCard img={img1} text = "Top Ice Cream Flavors to Sell This Year"/>
+      <BlogCard img={img2} text = "The Art of Crafting Gourmet Ice Cream"/>
+      <BlogCard img={img3} text = "Ice Cream Trends That Drive More Sales"/>
+      {/* <BlogCard img={img4} text = "Creative Marketing Tips for Ice Cream Shops"/> */}
+      </div>
+
+
+      <br />
       <Footer2 />
     </div>
   );

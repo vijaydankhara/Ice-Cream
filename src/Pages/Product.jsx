@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "../Components/ProductCard";
 import Footer2 from "../Components/Footer2";
+import HomeProductCardMid from "../Components/Card";
 
 const Product = () => {
   const [activeTab, setActiveTab] = useState('reviews');
@@ -55,6 +56,30 @@ const Product = () => {
         <hr />
       </div>
 
+<div className="flex justify-center my-5">
+  <h1 className="text-3xl font-Kalnia">Releted Product</h1>
+</div>
+
+<div className="flex mx-2">
+<HomeProductCardMid />
+<HomeProductCardMid />
+<HomeProductCardMid />
+<HomeProductCardMid />
+</div>
+
+<div className="flex justify-center my-5">
+  <h1 className="text-3xl font-Kalnia">Recently Viewed Products</h1>
+</div>
+
+<br /><br />
+<div className="flex">
+<HomeProductCardMid />
+<HomeProductCardMid />
+<HomeProductCardMid />
+<HomeProductCardMid />
+
+</div>
+<br /><br />
       <Footer2 />
     </div>
   );

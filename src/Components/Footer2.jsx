@@ -26,8 +26,8 @@ function Footer2() {
               <p className="text-white text-lg ">
                 Product announcements, promotions, and more!
               </p>
-              <div>
-              <input type="email" id="email" name="email" placeholder="Your Email" className="border-none w-[70%] mt-5 rounded-full placeholder:pl-4 py-3" />
+              <div className="">
+              <input type="email" id="email" name="email" placeholder="Your Email" className="border-none w-[70%] mt-5 rounded-full placeholder:pl-4 py-3  " />
 
     </div>
               <div className="bg-[#e10914] hover:bg-gray-50 text-gray-50 hover:text-gray-950 flex justify-center items-center text-3xl text-center w-14  h-14 rounded-full mt-4">
