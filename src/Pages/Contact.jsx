@@ -4,10 +4,12 @@ import Map from "../Components/Map";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiLogoBehance } from "react-icons/bi";
 import Footer2 from "../Components/Footer2";
+import Top from "../Components/Top";
 
 function Contact() {
   return (
     <div>
+    <Top/>
       <div>
         <div className="relative w-full h-[430px]">
           <img

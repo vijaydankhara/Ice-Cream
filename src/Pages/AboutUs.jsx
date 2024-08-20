@@ -9,6 +9,7 @@ import avtar3 from "../assets/avatar3.jpg";
 import avtar4 from "../assets/avatar4.jpg";
 import ArticleCard from "../Components/ArticleCard ";
 import Footer2  from "../Components/Footer2";
+import Top from "../Components/Top";
 
 
 // Stat Section Data
@@ -23,6 +24,7 @@ const stats = [
 function AboutUs() {
   return (
     <div>
+    <Top/>
       <div className="relative w-full h-[420px]">
         <img
           src={backgroundImage}

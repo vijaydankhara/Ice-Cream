@@ -6,10 +6,13 @@ import img1 from "../assets/asset1.jpeg";
 import img2 from "../assets/asset2.jpeg";
 import img3 from "../assets/asset3.jpeg";
 // import img4 from "../assets/asset47.jpeg";
+import Top from "../Components/Top";
 
 function Blog() {
   return (
     <div>
+    <Top/>
+    
       {/* 1st */}
       <div className="relative w-full h-[450px]">
         <img

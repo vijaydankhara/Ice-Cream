@@ -5,10 +5,12 @@ import { Pagination, Stack } from '@mui/material';
 import FilterComponent from "../Components/FilterComponent";
 import ProductCardProductList from "../Components/ProductCardProductList";
 import Footer from "../Components/Footer";
+import Top from "../Components/Top";
 
 const ShopList = () => {
   return (
     <div className="">
+    <Top/>
       <div className="relative w-full h-[400px]" id="shopbg">
         <div className="absolute inset-0  flex items-center justify-center">
           <div className="flex flex-col text-center items-center justify-center text-white mt-28">

@@ -2,10 +2,12 @@ import React from "react";
 import backgroundImage from "../assets/asset50.jpeg";
 import { FaFacebookF, FaTwitter, FaShareAlt, FaEnvelope } from "react-icons/fa";
 import Footer2 from "../Components/Footer2";
+import Top from "../Components/Top";
 
 const Wishlist = () => {
   return (
     <div className="">
+    <Top/>
       <div className="relative w-full h-[400px]">
         <img
           src={backgroundImage}
