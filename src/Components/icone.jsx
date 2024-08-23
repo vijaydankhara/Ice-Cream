@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faUser, faHeart, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faUser, faHeart, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+
 
 const IconBars = () => {
   return (
@@ -16,7 +17,7 @@ const IconBars = () => {
         <span className="icone"></span>
       </div>
       <div className="relative">
-        <FontAwesomeIcon icon={faShoppingCart} className="iconeNav" />
+        <FontAwesomeIcon icon={faShoppingBasket} className="iconeNav" />
         <span className="icone"></span>
       </div>
     </div>

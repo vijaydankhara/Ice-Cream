@@ -14,6 +14,7 @@ const Top = () => {
       setShowScroll(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", checkScrollTop);
     return () => {
@@ -25,7 +26,7 @@ const Top = () => {
     <div>
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-4 right-4 bg-[#ff0000] text-white  px-3 py-3 font-Kalnia rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 ${
+        className={`fixed bottom-2 right-72 bg-[#ff0000] text-white px-3 py-3 font-Kalnia rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 ${
           showScroll ? "opacity-100" : "opacity-0"
         }`}
       >

@@ -1,4 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -353,7 +354,7 @@ body, html {
   font-family: Kalnia;
   line-height: 65px;
   font-weight: 700;
-  font-size: 58px;
+  font-size: 40px;
 }
 
 .home-bt-shop {

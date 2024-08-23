@@ -6,11 +6,11 @@ const SliderHome = () => {
   return (
     <div>
       <div
-        className="w-full h-[800px] flex justify-center items-center gap-11"
+        className="w-full  h-[800px] flex justify-center items-center gap-11"
         id="slider"
       >
         <div className="w-[500px] h-[350px]">
-          <h4 className="text-[1.1rem] font-semibold">ICE CREAM SMILES</h4>
+          <h4 className="text-[1.1rem] font-sana-seriDm    font-semibold">SUNDAES AND SMILES</h4>
           <h1 id="Nav-text">Frosty Delights: Treat Yourself To Creamy</h1>
           <br />
           <button className="home-bt-shop">Shop Now</button>

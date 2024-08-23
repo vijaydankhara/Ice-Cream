@@ -22,7 +22,7 @@ const HomeSecondSlider = () => {
         </div>
 
         <div className="h-full  pl-9 justify-center flex flex-col mr-44">
-          <h1 className="slider-font">Make Every Day a Sweet Day</h1>
+          <h1 className="slider-font font-Kalnia">Make Every Day a Sweet Day</h1>
           <br />
           <p className="text-gray-500">
             But incorporating liquor into ice cream seems like nothing when you
@@ -34,25 +34,25 @@ const HomeSecondSlider = () => {
             id="texed"
           >
             <img src={img3} alt="not found" />{" "}
-            <span className="ml-7">Guaranteed frozen delivery</span>
+            <span className="ml-7 hover:text-[#ff0000] duration-500 ">Guaranteed frozen delivery</span>
           </div>
           <div
             className="w-full h-10 flex items-center font-semibold mb-3 "
             id="texed"
           >
             <img src={img4} alt="not found" />{" "}
-            <span className="ml-7">Guaranteed frozen delivery</span>
+            <span className="ml-7 hover:text-[#ff0000] duration-500">Guaranteed frozen delivery</span>
           </div>
           <div
             className="w-full h-10 flex items-center font-semibold "
             id="texed"
           >
             <img src={img5} alt="not found" />{" "}
-            <span className="ml-7">Guaranteed frozen delivery</span>
+            <span className="ml-7 hover:text-[#ff0000] duration-500">Guaranteed frozen delivery</span>
           </div>
           <br />
           <button
-            className="ml-10 w-36 h-10 bg-[#fff] hover:bg-[#ff0000]  flex items-center justify-center rounded-full"
+            className="ml-10 w-36 h-12 bg-[#fff] hover:bg-[#ff0000]  flex items-center justify-center rounded-full"
             id="home-slider-button"
           >
             {" "}
