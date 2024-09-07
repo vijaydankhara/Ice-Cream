@@ -16,7 +16,7 @@ import Top from "../Components/Top";
 const Home = () => {
   return (
     <>
-    {/* <Top/> */}
+    <Top/>
       <SliderHome />
       <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-around items-center h-auto md:h-[500px] p-4">
   <div>
@@ -128,7 +128,7 @@ const Home = () => {
  
       <ArticleCard />
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

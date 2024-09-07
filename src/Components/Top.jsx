@@ -24,15 +24,16 @@ const Top = () => {
 
   return (
     <div>
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-2 right-72 bg-[#ff0000] text-white px-3 py-3 font-Kalnia rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 ${
-          showScroll ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        Top
-      </button>
-    </div>
+    <button
+      onClick={scrollToTop}
+      className={`fixed w-12 h-12 bottom-24 right-4 bg-[#ff0000] text-white font-Kalnia rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 flex items-center justify-center ${
+        showScroll ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      Top
+    </button>
+  </div>
+  
   );
 };
 

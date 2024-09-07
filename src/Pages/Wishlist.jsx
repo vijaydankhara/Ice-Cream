@@ -16,7 +16,7 @@ const Wishlist = () => {
         />
         <div className="absolute inset-0  flex items-center justify-center">
           <div className="flex flex-col text-center items-center justify-center text-white mt-28">
-            <h1 className="text-4xl font-bold text-black">Wishlist</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-black">Wishlist</h1>
             <p className="mt-2">
               <a href="#" className="text-[#000] hover:text-[#ff0000]">
                 Home
@@ -29,9 +29,9 @@ const Wishlist = () => {
       </div>
 
       {/* Whishlist Sesction */}
-      <div className="flex my-20 justify-between px-5">
-        <div className="flex flex-col items-center space-y-4">
-          <p className="text-lg mb-3">There Are No Products On The Wishlist!</p>
+      <div className="flex flex-col sm:flex-row my-12 sm:my-20 justify-between px-4 sm:px-5 space-y-8 sm:space-y-0">
+        <div className="flex flex-col items-center sm:items-start space-y-4">
+          <p className="text-lg text-center sm:text-left">There Are No Products On The Wishlist!</p>
           <div className="flex items-center space-x-2">
             <span className="text-sm">Share On:</span>
             <a href="https://www.facebook.com" className="text-blue-700">
@@ -62,7 +62,7 @@ const Wishlist = () => {
                 "https://wpbingosite.com/wordpress/jumystore"
               )
             }
-            className="bg-black text-white rounded px-4 py-1"
+            className="bg-black text-white rounded px-4 py-1 mt-2 sm:mt-0"
           >
             Copy
           </button>

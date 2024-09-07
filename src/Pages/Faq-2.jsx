@@ -8,10 +8,10 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         className="flex justify-between items-center cursor-pointer"
         onClick={onToggle}
       >
-        <h3 className="text-sm font-medium">{question}</h3>
+        <h3 className="text-base sm:text-lg font-medium">{question}</h3>
         <span className="text-xl font-bold">{isOpen ? '-' : '+'}</span>
       </div>
-      {isOpen && <p className="mt-2 text-gray-600">{answer}</p>}
+      {isOpen && <p className="mt-2 text-gray-600 text-sm sm:text-base">{answer}</p>}
     </div>
   );
 };
@@ -53,8 +53,8 @@ const Faq2 = () => {
   return (
     <>
     
-      <div className="max-w-2xl mx-auto my-8">
-        <h1 className="text-4xl font-bold font-serif mb-4">Frequently Asked Questions</h1>
+      <div className="max-w-4xl mx-auto my-8 px-4">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif mb-6 text-center">Frequently Asked Questions</h1>
         {faqData.map((item, index) => (
           <FAQItem
             key={index}

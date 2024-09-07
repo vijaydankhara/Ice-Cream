@@ -27,7 +27,7 @@ const ArticleCard = () => {
     },
     {
       image: assent45,
-      title: "Post Format Video Blogs Dessert Recipes ",
+      title: "Post Format Video Blogs Dessert Recipes",
       date: "February 8, 2024",
     },
     {
@@ -47,68 +47,53 @@ const ArticleCard = () => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + articles.length) % articles.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + articles.length) % articles.length);
   };
 
-  const visibleArticles = articles
-    .slice(currentIndex, currentIndex + 3)
-    .concat(articles.slice(0, Math.max(0, currentIndex + 3 - articles.length)));
+  const visibleArticles = articles.slice(currentIndex, currentIndex + 3).concat(
+    articles.slice(0, Math.max(0, currentIndex + 3 - articles.length))
+  );
 
   return (
-    <div>
-    <div  className="text-center mt-5">
-      <h2 className="text-[#ff0000] text-3xl font-serif">Our News</h2>
-      <h1 className="text-[#000] text-3xl font-serif">Tastiest Updates</h1>
-    </div>
-      <div className="flex items-center justify-around mt-5">
-        <button
-          className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full w-10 h-10 ml-2 p-2 shadow text-gray-950 hover:text-gray-100"
-          onClick={handlePrev}
-        >
-          <FaArrowLeft />
-        </button>
-        <div className="flex overflow-hidden">
-          {visibleArticles.map((article, index) => (
-            <div
-              key={index}
-              className="max-w-sm mx-2 bg-[#ffffff] overflow-hidden "
-            >
-              <div className="overflow-hidden w-[95%]">
-                <img
-                  className="w-full h-60 object-cover homeIcecreem"
-                  src={article.image}
-                  alt={article.title}
-                />
-              </div>
+    <div className='flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-8'>
+      <button
+        className="bg-[#fff] hover:bg-[#ff0000] mr-3 rounded-full w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
+        onClick={handlePrev}
+      >
+        <FaArrowLeft />
+      </button>
 
-              <div className="py-4">
-                <div className="text-gray-500 text-sm font-medium">
-                  BUSINESS TIPS <span className="text-[#ff0000] mx-2">•</span>
-                  <span className="text-[#ff0000] mx-2">{article.date}</span>
-                </div>
-                <h2 className="text-xl mt-2 font-semibold text-[#000] hover:text-[#ff0000]">
-                  {article.title}
-                </h2>
-              </div>
+      <div className='flex w-full justify-center items-center overflow-x-auto hide-scrollbar space-x-4'>
+        {visibleArticles.map((article, index) => (
+          <div key={index} className="flex-shrink-0 w-64 sm:w-72 md:w-80 lg:w-96 bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className='w-full h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden'>
+              <img
+                className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105" 
+                src={article.image}
+                alt={article.title}
+              />
             </div>
-          ))}
-        </div>
-        <button
-          className="bg-[#ffffff] hover:bg-[#ff0000] mr-2 rounded-full w-10 h-10 p-2 shadow text-gray-950 hover:text-gray-100"
-          onClick={handleNext}
-        >
-          <FaArrowRight />
-        </button>
+
+            <div className="p-4">
+              <div className="text-gray-500 text-sm font-medium">
+                BUSINESS TIPS <span className="text-red-500 mx-2">•</span>
+                <span className="text-red-500 mx-2">{article.date}</span>
+              </div>
+              <h2 className="home-slider-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2 font-semibold text-black hover:text-red-500">
+                {article.title}
+              </h2>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="items-center text-center  mb-24">
-        <button className="ml-10 w-36 h-10 bg-[#ff0000] hover:bg-[#000] text-[#fff] rounded-full duration-700">
-          Read More
-        </button>
-      </div>
+
+      <button
+        className="bg-[#fff] hover:bg-[#ff0000] rounded-full ml-3 w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
+        onClick={handleNext}
+      >
+        <FaArrowRight />
+      </button>
     </div>
-    
   );
 };
 
