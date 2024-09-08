@@ -1,34 +1,27 @@
-import React from "react";
-import FooterlogoWhite from "../assets/asset48.svg";
-import { BiLogoBehance } from "react-icons/bi";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaUser,
-  FaYoutube,
-} from "react-icons/fa";
+import React from 'react';
+import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
+import Img from '../assets/asset48.svg';
 
 function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <div className="mx-auto max-w-screen-xl px-4 pt-12 pb-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-sans-serif">
+    <footer className="bg-black text-white w-full relative">
+      <div className="px-4 py-10 md:py-16 lg:py-24">
+        {/* Newsletter Section */}
+        <div className="flex flex-col items-center text-center mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" id='footer-text1'>
             Sign up for our newsletter!
           </h2>
-          <p className="mt-4 text-gray-400 text-sm sm:text-base lg:text-lg">
+          <p className="text-sm md:text-base lg:text-lg text-gray-400">
             Be the first to know about new flavors and more
           </p>
-        </div>
-        <div className="mt-6 flex justify-center">
-          <div className="custom-search font-Kalnia w-full sm:max-w-md lg:max-w-lg flex">
+          <div className="mt-6 flex flex-col md:flex-row justify-center items-center gap-4">
             <input
               type="text"
-              className="custom-search-input py-2 sm:py-3 flex-grow rounded-l-md"
+              className="w-full md:w-80 p-3 border border-gray-600 rounded-lg bg-gray-800 placeholder-gray-400"
               placeholder="Your Email..."
             />
             <button
-              className="custom-search-button font-Kalnia bg-red-600 hover:bg-red-700 text-white px-4 py-2 sm:py-3 rounded-r-md"
+              className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition duration-300"
               type="submit"
             >
               Subscribe
@@ -36,33 +29,32 @@ function Footer() {
           </div>
         </div>
 
-        <div className="pt-16 md:pt-32 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-5 text-center md:text-left">
-            <img
-              id="logo"
-              className="w-20 md:w-24 mb-4 md:mb-0"
-              src={FooterlogoWhite}
-              alt="Logo"
-            />
-            <p className="text-sm sm:text-base">
-              &copy; 2024 – Jumys. All Rights Reserved.
+        {/* Divider Line */}
+        <div className='w-full h-px bg-gray-300 opacity-80 mb-8'></div>
+
+        {/* Footer Bottom Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex items-center space-x-4 md:space-x-6">
+            <img id='logo' className='w-20 md:w-24' src={Img} alt="Logo" />
+            <p className="text-sm md:text-base text-center md:text-left">
+              &copy; 2024 - Jumys. All Rights Reserved.
             </p>
           </div>
-          <div className="flex space-x-4 mt-6 md:mt-0">
-            <a className="text-xl sm:text-2xl cursor-pointer">
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" className="text-xl md:text-2xl hover:text-red-500 transition duration-300">
               <FaFacebook />
             </a>
-            <a className="text-xl sm:text-2xl cursor-pointer">
+            <a href="#" className="text-xl md:text-2xl hover:text-red-500 transition duration-300">
               <FaUser />
             </a>
-            <a className="text-xl sm:text-2xl cursor-pointer">
+            <a href="#" className="text-xl md:text-2xl hover:text-red-500 transition duration-300">
               <FaYoutube />
             </a>
-            <a className="text-xl sm:text-2xl cursor-pointer">
+            <a href="#" className="text-xl md:text-2xl hover:text-red-500 transition duration-300">
               <FaInstagram />
             </a>
-            <a className="text-xl sm:text-2xl cursor-pointer">
-              <BiLogoBehance />
+            <a href="#" className="text-xl md:text-2xl hover:text-red-500 transition duration-300">
+              <FaBeer />
             </a>
           </div>
         </div>
