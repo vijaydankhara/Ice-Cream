@@ -13,8 +13,8 @@ import spin from "../assets/asset4.svg";
                       Frosty Delights: Treat Yourself To Creamy
                   </h1>
                   <div className='mt-4 flex flex-col md:flex-row gap-4'>
-                      <button className='home-bt-shop duration-200 px-8 py-3 text-base md:text-lg'>Shop Now</button>
-                      <button className='home-bt2-shop duration-200 px-8 py-3 text-base md:text-lg'>See more</button>
+                      <button className='home-bt-shop duration-200 px-8 py-2 text-base md:text-lg'>Shop Now</button>
+                      <button className='home-bt2-shop duration-200 px-8 py-2 text-base md:text-lg'>See more</button>
                   </div>
               </div>
   
