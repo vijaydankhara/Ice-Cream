@@ -38,7 +38,7 @@ const HomeSecondSlider = () => {
             <span>Guaranteed frozen delivery</span>
           </div>
   
-          <button className='mt-6 w-full max-w-xs h-10 bg-white flex items-center justify-center rounded-full border border-gray-300' id='home-slider-button'>
+          <button className='mt-6 w-1/2 max-w-xs h-10  bg-[#fff] hover:bg-[#ff0000] flex items-center justify-center rounded-full border border-gray-300' id='home-slider-button'>
             View More <FaArrowRight className='ml-2'/>
           </button>
         </div>
