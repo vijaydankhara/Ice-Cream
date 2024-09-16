@@ -2,7 +2,7 @@ import React from "react";
 
 const Pagination = () => {
   return (
-    <div className="px-4">
+    <div className="px-4 mt-5">
       <ul className="flex justify-center space-x-2 mb-10" role="tablist">
         {[...Array(8)].map((_, index) => (
           <li

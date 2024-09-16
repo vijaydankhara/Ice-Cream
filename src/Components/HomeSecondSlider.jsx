@@ -20,7 +20,7 @@ const HomeSecondSlider = () => {
       </div>   
   
         <div className='flex-1 lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:px-8 py-8 lg:-ml-16'>
-          <h1 className='slider-font text-2xl lg:text-6xl font-bold mb-4'>Make Every Day a Sweet Day</h1>
+          <h1 className='slider-font text-[#000000] text-2xl lg:text-6xl font-bold mb-4'>Make Every Day a Sweet Day</h1>
           <p className='text-gray-500 mb-6'>But incorporating liquor into ice cream seems like nothing when you consider how inventive…</p>
   
           <div className='flex items-center justify-center lg:justify-start mb-4'>

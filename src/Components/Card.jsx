@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
+import Slider from "react-slick";
 import {
   FaShoppingCart,
   FaSearch,
@@ -9,26 +10,43 @@ import {
 } from "react-icons/fa";
 import assets34 from "../assets/asset34.webp";
 import assets35 from "../assets/asset35.jpeg";
+import assets24 from "../assets/asset24.webp";
+import assets25 from "../assets/asset25.webp";
+import assets20 from "../assets/asset20.webp";
+import assets21 from "../assets/asset21.webp";
+import assets28 from "../assets/asset28.webp";
+import assets29 from "../assets/asset29.webp";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const HomeProductCardMid = () => {
-  const [image, setImage] = useState(assets34);
+// HomeProductCardMid component
+const HomeProductCardMid = ({
+  title,
+  price,
+  reviews,
+  rating,
+  image1,
+  image2,
+  soldOut,
+}) => {
+  const [image, setImage] = useState(image1);
   const [visible, setVisible] = useState(false);
 
   const handleMouseEnter = () => {
-    setImage(assets35);
+    setImage(image2);
     setVisible(true);
   };
 
   const handleMouseLeave = () => {
-    setImage(assets34);
+    setImage(image1);
     setVisible(false);
   };
 
   return (
-    <div className="flex items-center justify-center ">
+    <div className="flex items-center justify-center">
       <Card className="relative w-72 flex flex-col items-center justify-center">
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Card.Img src={image} alt="Darkest Chocolate" />
+          <Card.Img src={image} alt={title} />
           {visible && (
             <div className="flex flex-col gap-2 absolute top-2 right-2 z-10 items-center">
               <div className="relative group">
@@ -61,23 +79,25 @@ const HomeProductCardMid = () => {
             </div>
           )}
 
-          <div className="absolute top-[30%] left-[35%] items-center bg-white px-3 p-0.5 rounded-full text-center py-1">
-            Sold Out
-          </div>
+          {soldOut && (
+            <div className="absolute top-[30%] left-[35%] items-center bg-white px-3 p-0.5 rounded-full text-center py-1">
+              Sold Out
+            </div>
+          )}
         </div>
 
         <Card.Body>
-          <Card.Title className="mt-3">Blackout Chocolate Cake</Card.Title>
+          <Card.Title className="mt-3">{title}</Card.Title>
           <Card.Text>
             <div className="flex items-center">
               <div className="flex text-red-500">
-                {[...Array(5)].map((_, index) => (
+                {[...Array(rating)].map((_, index) => (
                   <FaStar key={index} />
                 ))}
               </div>
-              <div className="ml-2 text-sm">2 Reviews</div>
+              <div className="ml-2 text-sm">{reviews} Reviews</div>
             </div>
-            <strong>$12.00</strong>
+            <strong>{price}</strong>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -85,4 +105,122 @@ const HomeProductCardMid = () => {
   );
 };
 
-export default HomeProductCardMid;
+
+const HomeProductList = () => {
+  const products = [
+    {
+      title: "Blackout Chocolate Cake",
+      price: "$12.00",
+      reviews: 2,
+      rating: 5,
+      image1: assets34,
+      image2: assets35,
+      soldOut: true,
+    },
+    {
+      title: "Dark Chocolate Fudge",
+      price: "$15.00",
+      reviews: 4,
+      rating: 4,
+      image1: assets24,
+      image2: assets25,
+      soldOut: false,
+    },
+    {
+      title: "Vanilla Caramel Cake",
+      price: "$10.00",
+      reviews: 5,
+      rating: 3,
+      image1: assets20,
+      image2: assets21,
+      soldOut: false,
+    },
+    {
+      title: "Strawberry Shortcake",
+      price: "$8.00",
+      reviews: 3,
+      rating: 4,
+      image1: assets28,
+      image2: assets29,
+      soldOut: true,
+    },
+    {
+      title: "Strawberry Shortcake",
+      price: "$8.00",
+      reviews: 3,
+      rating: 4,
+      image1: assets28,
+      image2: assets29,
+      soldOut: true,
+    },
+    {
+      title: "Strawberry Shortcake",
+      price: "$8.00",
+      reviews: 3,
+      rating: 4,
+      image1: assets28,
+      image2: assets29,
+      soldOut: true,
+    },
+    {
+      title: "Strawberry Shortcake",
+      price: "$8.00",
+      reviews: 3,
+      rating: 4,
+      image1: assets28,
+      image2: assets29,
+      soldOut: true,
+    },
+    {
+      title: "Strawberry Shortcake",
+      price: "$8.00",
+      reviews: 3,
+      rating: 4,
+      image1: assets28,
+      image2: assets29,
+      soldOut: true,
+    },
+  ];
+
+ 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <Slider {...settings}>
+      {products.map((product, index) => (
+        <HomeProductCardMid
+          key={index}
+          title={product.title}
+          price={product.price}
+          reviews={product.reviews}
+          rating={product.rating}
+          image1={product.image1}
+          image2={product.image2}
+          soldOut={product.soldOut}
+        />
+      ))}
+    </Slider>
+  );
+};
+
+export default HomeProductList;

@@ -9,7 +9,7 @@ const IceCreamCard = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-5 m-4 sm:m-2 lg:m-2">
       {/* 1st card */}
-      <div className="bg-[#dff6e8] shadow-md p-6 text-center mb-10 sm:mb-20 mx-auto max-w-xs">
+      <div className="bg-[#dff6e8] shadow-md p-6 text-center mb-10 sm:mb-20 mx-auto max-w-xl">
         <div
           className="w-44 h-44 border mx-auto rounded-full overflow-hidden mb-4"
           style={{ outline: "5px solid white" }}
@@ -33,7 +33,7 @@ const IceCreamCard = () => {
       </div>
 
       {/* 2nd card */}
-      <div className="bg-[#ffe4e9] shadow-md p-6 text-center my-10 sm:mt-20 mx-auto max-w-xs">
+      <div className="bg-[#ffe4e9] shadow-md p-6 text-center my-10 sm:mt-20 mx-auto max-w-xl">
         <div
           className="w-44 h-44 border mx-auto rounded-full overflow-hidden mb-4"
           style={{ outline: "5px solid white" }}
@@ -57,7 +57,7 @@ const IceCreamCard = () => {
       </div>
 
       {/* 3rd card */}
-      <div className="bg-[#f4eac9] shadow-md p-6 text-center mb-10 sm:mb-20 mx-auto max-w-xs">
+      <div className="bg-[#f4eac9] shadow-md p-6 text-center mb-10 sm:mb-20 mx-auto max-w-xl">
         <div
           className="w-44 h-44 border mx-auto rounded-full overflow-hidden mb-4"
           style={{ outline: "5px solid white" }}
@@ -81,7 +81,7 @@ const IceCreamCard = () => {
       </div>
 
       {/* 4th card */}
-      <div className="bg-[#ead6c0] shadow-md p-6 text-center mt-10 sm:mt-20 mx-auto max-w-xs">
+      <div className="bg-[#ead6c0] shadow-md p-6 text-center mt-10 sm:mt-20 mx-auto max-w-xl">
         <div
           className="w-44 h-44 border mx-auto rounded-full overflow-hidden mb-4"
           style={{ outline: "5px solid white" }}
