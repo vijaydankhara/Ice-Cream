@@ -8,18 +8,23 @@ import {
   FaShareAlt,
   FaStar,
 } from "react-icons/fa";
-import assets34 from "../assets/asset34.webp";
-import assets35 from "../assets/asset35.jpeg";
-import assets24 from "../assets/asset24.webp";
-import assets25 from "../assets/asset25.webp";
 import assets20 from "../assets/asset20.webp";
 import assets21 from "../assets/asset21.webp";
+import assets24 from "../assets/asset24.webp";
+import assets25 from "../assets/asset25.webp";
 import assets28 from "../assets/asset28.webp";
 import assets29 from "../assets/asset29.webp";
+import assets30 from "../assets/asset30.webp";
+import assets31 from "../assets/asset31.webp";
+import assets32 from "../assets/asset32.webp";
+import assets33 from "../assets/asset33.jpeg";
+import assets34 from "../assets/asset34.webp";
+import assets35 from "../assets/asset35.jpeg";
+import assets66 from "../assets/asset66.webp";
+import assets67 from "../assets/asset67.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// HomeProductCardMid component
 const HomeProductCardMid = ({
   title,
   price,
@@ -44,7 +49,7 @@ const HomeProductCardMid = ({
 
   return (
     <div className="flex items-center justify-center">
-      <Card className="relative w-72 flex flex-col items-center justify-center">
+      <Card className="relative w-96 flex flex-col items-center justify-center">
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Card.Img src={image} alt={title} />
           {visible && (
@@ -105,7 +110,6 @@ const HomeProductCardMid = ({
   );
 };
 
-
 const HomeProductList = () => {
   const products = [
     {
@@ -149,8 +153,8 @@ const HomeProductList = () => {
       price: "$8.00",
       reviews: 3,
       rating: 4,
-      image1: assets28,
-      image2: assets29,
+      image1: assets32,
+      image2: assets33,
       soldOut: true,
     },
     {
@@ -158,8 +162,8 @@ const HomeProductList = () => {
       price: "$8.00",
       reviews: 3,
       rating: 4,
-      image1: assets28,
-      image2: assets29,
+      image1: assets30,
+      image2: assets30,
       soldOut: true,
     },
     {
@@ -167,8 +171,8 @@ const HomeProductList = () => {
       price: "$8.00",
       reviews: 3,
       rating: 4,
-      image1: assets28,
-      image2: assets29,
+      image1: assets31,
+      image2: assets31,
       soldOut: true,
     },
     {
@@ -176,13 +180,12 @@ const HomeProductList = () => {
       price: "$8.00",
       reviews: 3,
       rating: 4,
-      image1: assets28,
-      image2: assets29,
+      image1: assets66,
+      image2: assets67,
       soldOut: true,
     },
   ];
 
- 
   const settings = {
     dots: true,
     infinite: true,

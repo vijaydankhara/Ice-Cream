@@ -34,13 +34,11 @@ const ShopList = () => {
 
 
     {/* image side */}
-    <div>
+<div>
+
 <ProductCardProductList/>
-<ProductCardProductList/>
-<ProductCardProductList/>
-<ProductCardProductList/>
-<ProductCardProductList/>
-    </div>
+</div>
+
 
 </div>
 {/* Pagination */}

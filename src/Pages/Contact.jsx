@@ -12,7 +12,7 @@ function Contact() {
       <Top />
 
       {/* Background Image Section */}
-      <div className="relative w-full h-[300px] md:h-[430px]">
+      <div className="relative w-full h-[300px] md:h-[430px] sm:w-full">
         <img
           src={backgroundImage}
           alt="About Us Background"

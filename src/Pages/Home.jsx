@@ -6,7 +6,6 @@ import img17 from "../assets/asset17.jpeg";
 import img18 from "../assets/asset18.jpeg";
 import img19 from "../assets/asset19.jpeg";
 import HomeProductCardMid from "../Components/Card";
-import Pagination from "../Components/Pagination";
 import HomeSecondSlider from "../Components/HomeSecondSlider";
 import IceCreamCard from "../Components/HomeCards";
 import ArticleCard from "../Components/ArticleCard ";
@@ -133,7 +132,7 @@ const Home = () => {
       </div>
       <HomeProductCardMid />
     
-      <Pagination />
+
       <HomeSecondSlider />
       <IceCreamCard />
 

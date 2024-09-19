@@ -95,7 +95,7 @@ const FilterComponent = () => {
   ];
 
   return (
-    <div className="p-4 rounded-lg w-96">
+    <div className="p-4 rounded-lg w-96 hidden sm:block">
       {/* Categories Section */}
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Categories</h3>

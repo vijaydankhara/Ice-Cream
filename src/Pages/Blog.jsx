@@ -10,9 +10,9 @@ import Top from "../Components/Top";
 
 function Blog() {
   return (
-    <div>
-    <Top/>
-  
+    <div className="container">
+      <Top />
+
       <div className="relative w-full h-[450px]">
         <img
           src={backgroundImage}
@@ -34,12 +34,11 @@ function Blog() {
       </div>
 
       <div className="w-full flex flex-wrap justify-center gap-y-10 sm:gap-x-5 md:gap-x-10 my-5">
-  <BlogCard img={img1} text="Top Ice Cream Flavors to Sell This Year" />
-  <BlogCard img={img2} text="The Art of Crafting Gourmet Ice Cream" />
-  <BlogCard img={img3} text="Ice Cream Trends That Drive More Sales" />
-  {/* <BlogCard img={img4} text = "Creative Marketing Tips for Ice Cream Shops"/> */}
-</div>
-
+        <BlogCard img={img1} text="Top Ice Cream Flavors to Sell This Year" />
+        <BlogCard img={img2} text="The Art of Crafting Gourmet Ice Cream" />
+        <BlogCard img={img3} text="Ice Cream Trends That Drive More Sales" />
+        {/* <BlogCard img={img4} text = "Creative Marketing Tips for Ice Cream Shops"/> */}
+      </div>
 
       <br />
       <Footer2 />

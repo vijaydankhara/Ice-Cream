@@ -62,26 +62,19 @@ const Product = () => {
   <h1 className="text-3xl font-Kalnia">Releted Product</h1>
 </div>
 
-<div className="flex mx-2">
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
+<div className="gap-5">
+
+<HomeProductCardMid/>
 </div>
 
 <div className="flex justify-center my-5">
   <h1 className="text-3xl font-Kalnia">Recently Viewed Products</h1>
 </div>
 
-<br /><br />
-<div className="flex">
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
 
-</div>
-<br /><br />
+<HomeProductCardMid/>
+
+<div className="mt-5"></div>
       <Footer2 />
     </div>
   );
