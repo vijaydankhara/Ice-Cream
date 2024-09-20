@@ -11,4 +11,3 @@ const Shop = () => {
 }
 
 export default Shop
-https://ice-cream-vijaydankhara.vercel.app/
