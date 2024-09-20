@@ -26,7 +26,7 @@ const Top = () => {
     <div>
     <button
       onClick={scrollToTop}
-      className={`fixed w-12 h-12 bottom-24 right-4 bg-[#ff0000] text-white font-Kalnia rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 flex items-center justify-center ${
+      className={`fixed w-12 h-12 bottom-24 right-12 bg-[#ff0000] text-white font-Kalnia rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 flex items-center justify-center ${
         showScroll ? "opacity-100" : "opacity-0"
       }`}
     >

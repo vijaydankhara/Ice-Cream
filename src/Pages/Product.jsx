@@ -67,7 +67,7 @@ const Product = () => {
 <HomeProductCardMid/>
 </div>
 
-<div className="flex justify-center my-5">
+<div className="container text-center flex justify-center my-5">
   <h1 className="text-3xl font-Kalnia">Recently Viewed Products</h1>
 </div>
 

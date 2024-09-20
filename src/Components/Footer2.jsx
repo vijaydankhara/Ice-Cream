@@ -7,88 +7,92 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
-import { FaArrowRight, FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
+import { FaArrowRight, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 
-function Footer2() {
+function HomeFooter() {
   return (
-    <MDBFooter
-      bgColor="black"
-      className="text-center text-lg-start text-muted pt-16"
-    >
-      <section className="pb-5">
-        <MDBContainer className="text-center text-md-start mt-5">
-          <MDBRow className="mt-3">
-            <MDBCol className="mx-auto mb-4">
-              <h6 className="text-white font-serif text-xl fw-bold mb-4">
-                <MDBIcon icon="gem" className="me-3" />
-                our newsletter
+    <MDBFooter bgColor="black" className="text-lg-start text-muted">
+      <section className="pb-5 text-white">
+        <MDBContainer className="px-4 sm:px-6 lg:px-8 pt-14">
+          <MDBRow className="flex flex-col md:flex-row justify-between">
+            {/* Newsletter Section */}
+            <MDBCol md="6" lg="4" className="py-7 mb-4">
+              <h6 className="text-white font-serif text-xl md:text-2xl lg:text-3xl fw-bold mb-4">
+                Our Newsletter
               </h6>
-              <p className="text-white text-lg ">
-                Product announcements, promotions, and more!
+              <p className="text-gray-500 text-base md:text-lg mb-4">
+                Product Announcements, Promotions, And More!
               </p>
-              <div className="">
-              <input type="email" id="email" name="email" placeholder="Your Email" className="border-none w-[70%] mt-5 rounded-full placeholder:pl-4 py-3  " />
-
-    </div>
-              <div className="bg-[#e10914] hover:bg-gray-50 text-gray-50 hover:text-gray-950 flex justify-center items-center text-3xl text-center w-14  h-14 rounded-full mt-4">
-                <FaArrowRight />
+              <div className="relative mb-4">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email..."
+                  className="bg-black text-white placeholder-gray-400 border-b-2 border-gray-500 h-12 w-full px-3 focus:outline-none"
+                />
+                <button className="absolute right-0 top-0 mt-1 bg-[#e10914] hover:bg-gray-700 text-white flex justify-center items-center text-xl w-12 h-12 rounded-full transition duration-300">
+                  <FaArrowRight />
+                </button>
               </div>
             </MDBCol>
 
-            <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-              <h6 className="FooterTitle ">Information</h6>
-              <ul className="">
-                <li className="footerServiceMenu ">Help Center</li>
-                <li className="footerServiceMenu">Shipping</li>
-                <li className="footerServiceMenu">Returns</li>
-                <li className="footerServiceMenu">Policies</li>
-                <li className="footerServiceMenu">Gift Cards</li>
+            {/* Information Section */}
+       
+            <MDBCol md="2" lg="2" className="mb-4">
+              <h6 className="FooterTitle">Information</h6>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-red-600">Help Center</a></li>
+                <li><a href="#" className="hover:text-red-600">Shipping</a></li>
+                <li><a href="#" className="hover:text-red-600">Returns</a></li>
+                <li><a href="#" className="hover:text-red-600">Policies</a></li>
+                <li><a href="#" className="hover:text-red-600">Gift Cards</a></li>
               </ul>
             </MDBCol>
 
-            <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
+            {/* Shop Section */}
+            <MDBCol md="2" lg="2" className="mb-4">
               <h6 className="FooterTitle">Shop</h6>
-              <ul className="">
-                <li className="footerServiceMenu">All Flavors</li>
-                <li className="footerServiceMenu">Collections</li>
-                <li className="footerServiceMenu">Pint Club</li>
-                <li className="footerServiceMenu">Merch</li>
-                <li className="footerServiceMenu">Corporate Gifts</li>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-red-600">All Flavors</a></li>
+                <li><a href="#" className="hover:text-red-600">Collections</a></li>
+                <li><a href="#" className="hover:text-red-600">Pint Club</a></li>
+                <li><a href="#" className="hover:text-red-600">Merch</a></li>
+                <li><a href="#" className="hover:text-red-600">Corporate Gifts</a></li>
               </ul>
             </MDBCol>
-
-            <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
+           
+            {/* About Us Section */}
+            <MDBCol md="6" lg="3">
               <h6 className="FooterTitle">About Us</h6>
-              <ul className="">
-                <li className="footerServiceMenu">Our story</li>
-                <li className="footerServiceMenu">Contact</li>
-                <li className="footerServiceMenu">Affiliate Program</li>
-                <li className="footerServiceMenu">Referral Program</li>
-                <li className="footerServiceMenu">Careers</li>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-red-600">Our Story</a></li>
+                <li><a href="#" className="hover:text-red-600">Contact</a></li>
+                <li><a href="#" className="hover:text-red-600">Affiliate Program</a></li>
+                <li><a href="#" className="hover:text-red-600">Referral Program</a></li>
+                <li><a href="#" className="hover:text-red-600">Careers</a></li>
               </ul>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
-      <div className=" border border-[#fbfafa] opacity-15"></div>
-      <div className="pt-1  md:mt-0 flex justify-between items-center px-3">
-        <div className="flex left-0 space-x-5 items-center py-7">
-          <div className="mb-1 ">
-            <p className="text-base text-white text-center sm:text-left">
-              &copy; 2024 – Jumys. All Rights Reserved.
-            </p>
-          </div>
+      <div className="border border-[#fbfafa] opacity-15"></div>
+      
+      {/* Footer Bottom Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
+        <div className="text-base text-white mb-4 md:mb-0">
+          &copy; 2024 - Jumys. All Rights Reserved.
         </div>
-        <div className="flex space-x-4 text-white">
-          <a className="text-2xl cursor-pointer"><FaFacebook/></a>
-          <a className="text-2xl cursor-pointer"><FaUser/></a>
-          <a className="text-2xl cursor-pointer"><FaYoutube/></a>
-          <a className="text-2xl cursor-pointer"><FaInstagram/></a>
-          <a className="text-2xl cursor-pointer"><BiLogoBehance/></a>
+        <div className="flex space-x-4 text-white text-2xl">
+          <a href="#" className="hover:text-red-600"><FaFacebook /></a>
+          <a href="#" className="hover:text-red-600"><FaUser /></a>
+          <a href="#" className="hover:text-red-600"><FaYoutube /></a>
+          <a href="#" className="hover:text-red-600"><FaInstagram /></a>
+          <a href="#" className="hover:text-red-600"><BiLogoBehance /></a>
         </div>
       </div>
     </MDBFooter>
   );
 }
 
-export default Footer2;
+export default HomeFooter;
