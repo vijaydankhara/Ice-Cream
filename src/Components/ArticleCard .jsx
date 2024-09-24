@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import assent1 from "../assets/asset1.jpeg";
-import assent2 from "../assets/asset2.jpeg";
-import assent3 from "../assets/asset3.jpeg";
-import assent45 from "../assets/asset45.jpeg";
-import assent46 from "../assets/asset46.jpeg";
-import assent47 from "../assets/asset47.jpeg";
+import assent1 from '../assets/asset1.jpeg';
+import assent2 from '../assets/asset2.jpeg';
+import assent3 from '../assets/asset3.jpeg';
+import assent45 from '../assets/asset45.jpeg';
+import assent46 from '../assets/asset46.jpeg';
+import assent47 from '../assets/asset47.jpeg';
 
 const ArticleCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,7 +57,7 @@ const ArticleCard = () => {
   return (
     <div className='flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-8'>
       <button
-        className="bg-[#fff] hover:bg-[#ff0000] mr-3 rounded-full w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
+        className="bg-white hover:bg-red-500 rounded-full w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
         onClick={handlePrev}
       >
         <FaArrowLeft />
@@ -88,7 +88,7 @@ const ArticleCard = () => {
       </div>
 
       <button
-        className="bg-[#fff] hover:bg-[#ff0000] rounded-full ml-3 w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
+        className="bg-white hover:bg-red-500 rounded-full w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
         onClick={handleNext}
       >
         <FaArrowRight />
