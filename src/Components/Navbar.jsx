@@ -43,13 +43,9 @@ const Navbar = () => {
                 onMouseEnter={() => toggleMenu("home")}
                 onMouseLeave={() => toggleMenu(null)}
               >
-                <button
-                  className="NavbatTxt"
-                  onClick={() => navigate("/")}
-                >
+                <button className="NavbatTxt" onClick={() => navigate("/")}>
                   Home
                 </button>
-                
               </div>
 
               {/* Shop, Products, Blog, and Page menus stay unchanged */}
@@ -97,9 +93,12 @@ const Navbar = () => {
                 onMouseEnter={() => toggleMenu("products")}
                 onMouseLeave={() => toggleMenu(null)}
               >
-                <button className="NavbatTxt"
-                    onClick={() => navigate("/product")}>Products</button>
-               
+                <button
+                  className="NavbatTxt"
+                  onClick={() => navigate("/product")}
+                >
+                  Products
+                </button>
               </div>
 
               <div
@@ -107,8 +106,19 @@ const Navbar = () => {
                 onMouseEnter={() => toggleMenu("blog")}
                 onMouseLeave={() => toggleMenu(null)}
               >
-                <button className="NavbatTxt" onClick={() => navigate("/blog")} >Blog</button>
-                
+                <button className="NavbatTxt" onClick={() => navigate("/blog")}>
+                  Blog
+                </button>
+              </div>
+
+              <div
+                className="relative"
+                onMouseEnter={() => toggleMenu("blog")}
+                onMouseLeave={() => toggleMenu(null)}
+              >
+                <button className="NavbatTxt" onClick={() => navigate("/addproduct")}>
+                  AddProducts
+                </button>
               </div>
 
               <div

@@ -1,162 +1,294 @@
 import React, { useState } from 'react';
-import backgroundImage from "../assets/asset50.jpeg";
 import { FaUser } from 'react-icons/fa';
-import Footer2 from '../Components/Footer2';
+import axios from 'axios';
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjZmNDJmNjQyZjUxYWFhOGQyNTU1NDIzIiwiaWF0IjoxNzI3Mjc4OTk2fQ.ewf8L_Khs5-eusGJqPS3bVb0TuhOCno314McIrV3pto
+
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [isRegister, setIsRegister] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    gender: '',
+    dateOfBirth: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    mobileNo: ''
+  });
+  const [errors, setErrors] = useState({});
+  const [popupMessage, setPopupMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
 
+  const toggleForm = () => {
+    setIsRegister(!isRegister);
+    resetForm();
+  };
+
+  const resetForm = () => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      gender: '',
+      dateOfBirth: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      mobileNo: ''
+    });
+    setErrors({});
+  };
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const onSubmitForm = async (e) => {
+    e.preventDefault();
+
+    // Validate form fields
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
+    // Data function to handle API requests
+    const data = async () => {
+      try {
+        let response;
+        if (isRegister) {
+          // Register API call
+          response = await axios.post('http://localhost:1111/api/user/register-user', formData);
+          console.log("User Response",response);
+          setPopupMessage('User registered successfully!');
+        } else {
+          // Login API call
+          response = await axios.post('http://localhost:1111/api/user/login', formData);
+          console.log("User Response",response);
+          setPopupMessage('User logged in successfully!');
+        }
+        setShowPopup(true);
+        resetForm(); // Reset the form after successful submission
+      } catch (error) {
+        console.error('Error occurred:', error.response ? error.response.data : error.message);
+      }
+    };
+    await data();
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const validateForm = () => {
+    const formErrors = {};
+    if (isRegister) {
+      if (!formData.firstName) formErrors.firstName = 'First Name is required';
+      if (!formData.lastName) formErrors.lastName = 'Last Name is required';
+      if (!formData.gender) formErrors.gender = 'Gender is required';
+      if (!formData.dateOfBirth) formErrors.dateOfBirth = 'Date of Birth is required';
+      if (!formData.mobileNo) formErrors.mobileNo = 'Mobile Number is required';
+    }
+
+    if (!formData.email || !validateEmail(formData.email)) {
+      formErrors.email = 'Valid Email is required';
+    }
+
+    if (!formData.password) {
+      formErrors.password = 'Password is required';
+    }
+
+    if (isRegister && formData.password !== formData.confirmPassword) {
+      formErrors.confirmPassword = 'Passwords do not match';
+    }
+
+    return formErrors;
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
-    <div>
-      {/* Background Image Section */}
-      <div className="relative w-full h-[400px]">
-        <img
-          src={backgroundImage}
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex flex-col text-center items-center text-white mt-28">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">My Account</h1>
-            <p className="mt-2 text-sm sm:text-base">
-              <a href="#" className="text-[#000] hover:text-[#ff0000]">Home</a> 
-              <span className="text-black mx-1">/</span>
-              <span className="text-red-500">My Account</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Login and Register Forms */}
-      <div className="flex flex-col lg:flex-row justify-center gap-10 w-full px-6 md:px-10 lg:px-20 py-10">
-        {/* Login Form */}
-        <div className="p-6 bg-white border border-gray-300 w-full lg:w-1/2">
-          <div className="flex justify-center text-2xl gap-2 underline">
+    <div className="flex  items-center justify-center min-h-screen bg-gray-100 py-10">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md ">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 flex items-center gap-2">
             <FaUser />
-            <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-800">Login</h2>
+            {isRegister ? 'Register' : 'Login'}
+          </h2>
+          <button
+            onClick={toggleForm}
+            className="text-sm text-blue-500 hover:underline focus:outline-none"
+          >
+            {isRegister ? 'Switch to Login' : 'Switch to Register'}
+          </button>
+        </div>
+
+        <form className="mt-4" onSubmit={onSubmitForm}>
+          {isRegister && (
+            <>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm text-gray-500">
+                  First Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
+                  type="text"
+                />
+                {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm text-gray-500">
+                  Last Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
+                  type="text"
+                />
+                {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm text-gray-500">
+                  Gender <span className="text-red-500">*</span>
+                </label>
+                <select
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+                {errors.gender && <p className="text-red-500 text-xs mt-1">{errors.gender}</p>}
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm text-gray-500">
+                  Date of Birth <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="dateOfBirth"
+                  value={formData.dateOfBirth}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
+                  type="date"
+                />
+                {errors.dateOfBirth && <p className="text-red-500 text-xs mt-1">{errors.dateOfBirth}</p>}
+              </div>
+              <div className="mb-4">
+                <label className="block mb-2 text-sm text-gray-500">
+                  Mobile Number <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="mobileNo"
+                  value={formData.mobileNo}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
+                  type="tel"
+                />
+                {errors.mobileNo && <p className="text-red-500 text-xs mt-1">{errors.mobileNo}</p>}
+              </div>
+            </>
+          )}
+
+          <div className="mb-4">
+            <label className="block mb-2 text-sm text-gray-500">
+              Email <span className="text-red-500">*</span>
+            </label>
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
+              type="email"
+            />
+            {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
           </div>
-          <form className="mt-4">
-            <div className="mb-4">
-              <label className="block mb-2 text-sm text-gray-500">
-                Username Or Email Address <span className="text-red-500">*</span>
-              </label>
+
+          <div className="mb-4">
+            <label className="block mb-2 text-sm text-gray-500">
+              Password <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
               <input
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
                 className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
-                type="text"
-                required
+                type={passwordVisible ? 'text' : 'password'}
               />
+              <button
+                type="button"
+                className="absolute inset-y-0 right-0 px-3 py-2 text-gray-500"
+                onClick={togglePasswordVisibility}
+              >
+                {passwordVisible ? 'Hide' : 'Show'}
+              </button>
             </div>
+            {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
+          </div>
+
+          {isRegister && (
             <div className="mb-4">
               <label className="block mb-2 text-sm text-gray-500">
-                Password <span className="text-red-500">*</span>
+                Confirm Password <span className="text-red-500">*</span>
               </label>
               <div className="relative">
                 <input
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleInputChange}
                   className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
-                  type={passwordVisible ? "text" : "password"}
-                  required
+                  type={passwordVisible ? 'text' : 'password'}
                 />
-                <button
-                  type="button"
-                  className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
-                  onClick={togglePasswordVisibility}
-                >
-                  {/* Password visibility icon */}
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.172.527-.376 1.032-.606 1.5M15 12a3 3 0 01-6 0"
-                    />
-                  </svg>
-                </button>
               </div>
+              {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>}
             </div>
-            <div className="flex items-center justify-between mb-6">
-              <label className="text-sm text-gray-700">
-                <input type="checkbox" className="mr-2" /> Remember Me
-              </label>
-              <a href="#" className="text-sm font-bold text-blue-500 hover:text-blue-800">Lost Your Password?</a>
-            </div>
-            <button
-              className="w-full px-4 py-2 font-bold text-white bg-black rounded-full hover:bg-red-500 transition duration-700 focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              LOGIN
-            </button>
-          </form>
-        </div>
+          )}
 
-        {/* Register Form */}
-        <div className="p-6 bg-white border border-gray-300 w-full lg:w-1/2">
-          <div className="flex justify-center text-2xl gap-2 underline">
-            <FaUser />
-            <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-800">Register</h2>
-          </div>
-          <form className="mt-4">
-            <div className="mb-4">
-              <label className="block mb-2 text-sm text-gray-500">Email Address <span className="text-red-500">*</span></label>
-              <input
-                className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
-                type="email"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-2 text-sm text-gray-500">Password <span className="text-red-500">*</span></label>
-              <div className="relative">
-                <input
-                  className="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
-                  type={passwordVisible ? "text" : "password"}
-                  required
-                />
-                <button
-                  type="button"
-                  className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
-                  onClick={togglePasswordVisibility}
-                >
-                  {/* Password visibility icon */}
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.172.527-.376 1.032-.606 1.5M15 12a3 3 0 01-6 0"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <button
-              className="w-full px-4 py-2 font-bold text-white bg-gray-400 rounded-full hover:bg-red-500 transition duration-700 focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              REGISTER
-            </button>
-          </form>
-        </div>
+          <button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-full focus:outline-none focus:shadow-outline"
+          >
+            {isRegister ? 'Register' : 'Login'}
+          </button>
+        </form>
       </div>
 
-      <Footer2 />
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <p>{popupMessage}</p>
+            <button
+              className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full"
+              onClick={closePopup}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default Login;
