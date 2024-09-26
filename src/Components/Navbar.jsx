@@ -168,15 +168,7 @@ const Navbar = () => {
                 <button className="NavbatTxt">Admin &#11163;</button>
                 {activeMenu === "admin" && (
                   <ul className="absolute left-0 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
-                    <li>
-                      <NavLink
-                        to="/adminRegister"
-                        className="page"
-                        onClick={() => toggleMenu(null)}
-                      >
-                        Admin Register & Login
-                      </NavLink>
-                    </li>
+                    
                     
                     <li>
                       <NavLink

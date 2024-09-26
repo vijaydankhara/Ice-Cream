@@ -11,21 +11,19 @@ const AdminData = () => {
   useEffect(() => {
     const GetAllProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:1111/api/admin/get-All-Product");
+        const response = await axios.get(
+          "http://localhost:1111/api/admin/get-All-Product"
+        );
         setProducts(response.data);
       } catch (error) {
-        console.error("Error fetching product Get All data:", error);
+        console.error("Error fetching product data:", error);
       }
     };
 
     GetAllProducts();
   }, []);
 
-  if (!Array.isArray(products)) {
-    console.error("Products is undefined array.");
-    return null;
-  }
-
+  // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -64,11 +62,13 @@ const AdminData = () => {
               <td className="border px-4 py-2">{product.title}</td>
               <td className="border px-4 py-2">{product.description}</td>
               <td className="border px-4 py-2">
-                <img
-                  src={product.productImage}
-                  className="w-16 h-16"
-              
-                />
+                {product.productImage && product.productImage.length > 0 && (
+                  <img
+                    src={`http://localhost:1111/${product.productImage[0]}`}
+                    alt={product.title}
+                    className="w-16 h-16 object-cover"
+                  />
+                )}
               </td>
               <td className="border px-4 py-2">${product.price}</td>
               <td className="border px-4 py-2">${product.slashPrice}</td>

@@ -6,7 +6,7 @@ import Product from './Product';
 import Blog from './Blog';
 import Page from './Page';
 import Contact from './Contact';
-import ShopList from './ShopList'; // Import the ShopList component
+import ShopList from './ShopList';
 import Login from './Login'; 
 import Wishlist from './Wishlist';
 import AboutUs from './AboutUs';
@@ -14,7 +14,6 @@ import Faq2 from './Faq-2';
 import Error404 from './Error404';
 import Profile from './Profile';
 import AddProduct from '../Admin/AddProduct';
-import AdminRegister from '../Admin/AdminRegister';
 import Admin from '../Admin/AdminData';
 
 
@@ -80,10 +79,6 @@ const PageRouter = createBrowserRouter([
       {
         path: '/addproduct',
         element:<AddProduct/>
-      },
-      {
-        path: '/adminRegister',
-        element:<AdminRegister/>
       },
       {
         path: '/admindata',
