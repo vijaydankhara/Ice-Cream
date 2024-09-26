@@ -13,7 +13,9 @@ import AboutUs from './AboutUs';
 import Faq2 from './Faq-2';
 import Error404 from './Error404';
 import Profile from './Profile';
-import AddProduct from './AddProduct';
+import AddProduct from '../Admin/AddProduct';
+import AdminRegister from '../Admin/AdminRegister';
+import Admin from '../Admin/AdminData';
 
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -78,7 +80,17 @@ const PageRouter = createBrowserRouter([
       {
         path: '/addproduct',
         element:<AddProduct/>
-      }
+      },
+      {
+        path: '/adminRegister',
+        element:<AdminRegister/>
+      },
+      {
+        path: '/admindata',
+        element:<Admin/>
+      },
+    
+    
   
       
     ]

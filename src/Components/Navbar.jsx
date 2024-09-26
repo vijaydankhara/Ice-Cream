@@ -9,13 +9,14 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const navigate = useNavigate(); // Initializing useNavigate
 
+  // Toggle menu function to ensure only one menu is open at a time
   const toggleMenu = (menu) => {
-    setActiveMenu(activeMenu === menu ? null : menu);
+    setActiveMenu((prevMenu) => (prevMenu === menu ? null : menu));
   };
 
   return (
     <>
-      <div className="bg-[#fff] w-full h-28 flex justify-around items-center z-50  sticky top-0">
+      <div className="bg-[#fff] w-full h-28 flex justify-around items-center z-50 sticky top-0">
         <div className="container">
           <div className="flex items-center justify-between ml-5">
             <div className="" id="toggelmenuTop">
@@ -30,14 +31,10 @@ const Navbar = () => {
               className="flex items-center rtl:space-x-reverse"
               onClick={() => navigate("/")} // Navigate to home
             >
-              <img
-                id="logo"
-                className="size-24"
-                src={Weblogo}
-                alt="Not Found"
-              />
+              <img id="logo" className="size-24" src={Weblogo} alt="Not Found" />
             </button>
             <div className="hidden md:flex space-x-16" id="toggle">
+              {/* Home menu */}
               <div
                 className="relative"
                 onMouseEnter={() => toggleMenu("home")}
@@ -48,7 +45,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              {/* Shop, Products, Blog, and Page menus stay unchanged */}
+              {/* Shop menu */}
               <div
                 className="relative"
                 onMouseEnter={() => toggleMenu("shop")}
@@ -88,6 +85,7 @@ const Navbar = () => {
                 )}
               </div>
 
+              {/* Products menu */}
               <div
                 className="relative"
                 onMouseEnter={() => toggleMenu("products")}
@@ -101,6 +99,7 @@ const Navbar = () => {
                 </button>
               </div>
 
+              {/* Blog menu */}
               <div
                 className="relative"
                 onMouseEnter={() => toggleMenu("blog")}
@@ -111,16 +110,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <div
-                className="relative"
-                onMouseEnter={() => toggleMenu("blog")}
-                onMouseLeave={() => toggleMenu(null)}
-              >
-                <button className="NavbatTxt" onClick={() => navigate("/addproduct")}>
-                  AddProducts
-                </button>
-              </div>
-
+              {/* Page menu */}
               <div
                 className="relative"
                 onMouseEnter={() => toggleMenu("page")}
@@ -168,16 +158,53 @@ const Navbar = () => {
                   </ul>
                 )}
               </div>
+
+              {/* Admin menu */}
+              <div
+                className="relative"
+                onMouseEnter={() => toggleMenu("admin")}
+                onMouseLeave={() => toggleMenu(null)}
+              >
+                <button className="NavbatTxt">Admin &#11163;</button>
+                {activeMenu === "admin" && (
+                  <ul className="absolute left-0 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
+                    <li>
+                      <NavLink
+                        to="/adminRegister"
+                        className="page"
+                        onClick={() => toggleMenu(null)}
+                      >
+                        Admin Register & Login
+                      </NavLink>
+                    </li>
+                    
+                    <li>
+                      <NavLink
+                        to="/admindata"
+                        className="page"
+                        onClick={() => toggleMenu(null)}
+                      >
+                        Admin Data
+                      </NavLink>
+                    </li>
+
+                
+                  </ul>
+                )}
+              </div>
             </div>
+
+            {/* Icons bar */}
             <div className="flex justify-between items-center">
               <IconBar />
             </div>
           </div>
 
+          {/* Mobile menu */}
           {activeMenu === "mobile" && (
             <ul
               id="toggelmenuTop"
-              className=" bg-[#ffffff] text-black text-xl font-bold space-y-4 py-4 px-4 w-full"
+              className="bg-[#ffffff] text-black text-xl font-bold space-y-4 py-4 px-4 w-full"
             >
               <li>
                 <NavLink to="/" onClick={() => toggleMenu(null)}>
@@ -208,6 +235,7 @@ const Navbar = () => {
           )}
         </div>
 
+        {/* Bottom navigation for mobile */}
         <div
           className="w-full justify-evenly flex fixed bg-white h-16 bottom-0"
           id="toggelHiden"
