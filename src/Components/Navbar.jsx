@@ -7,9 +7,9 @@ import { FaGripVertical, FaHeart, FaSearch, FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
-  const navigate = useNavigate(); // Initializing useNavigate
+  const navigate = useNavigate(); 
 
-  // Toggle menu function to ensure only one menu is open at a time
+  
   const toggleMenu = (menu) => {
     setActiveMenu((prevMenu) => (prevMenu === menu ? null : menu));
   };
@@ -63,15 +63,7 @@ const Navbar = () => {
                         Shop List
                       </NavLink>
                     </li>
-                    <li>
-                      <NavLink
-                        to="/login"
-                        className="shop"
-                        onClick={() => toggleMenu(null)}
-                      >
-                        Login
-                      </NavLink>
-                    </li>
+                  
                     <li>
                       <NavLink
                         to="/wishlist"
@@ -159,31 +151,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Admin menu */}
-              <div
-                className="relative"
-                onMouseEnter={() => toggleMenu("admin")}
-                onMouseLeave={() => toggleMenu(null)}
-              >
-                <button className="NavbatTxt">Admin &#11163;</button>
-                {activeMenu === "admin" && (
-                  <ul className="absolute left-0 w-48 bg-white text-[#000000] shadow-lg rounded-md overflow-hidden">
-                    
-                    
-                    <li>
-                      <NavLink
-                        to="/admindata"
-                        className="page"
-                        onClick={() => toggleMenu(null)}
-                      >
-                        Admin Data
-                      </NavLink>
-                    </li>
-
-                
-                  </ul>
-                )}
-              </div>
+              
             </div>
 
             {/* Icons bar */}

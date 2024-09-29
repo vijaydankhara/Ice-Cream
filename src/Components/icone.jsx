@@ -16,11 +16,7 @@ const IconBars = () => {
         <FontAwesomeIcon icon={faRightToBracket} className="iconeNav" />
       </NavLink>
 
-     <NavLink to="/profile">
-     <div className="relative" id="icon1">
-        <FontAwesomeIcon icon={faUser} className="iconeNav" />
-      </div>
-     </NavLink>
+     
 
       <div className="relative" id="icon1">
         <FontAwesomeIcon icon={faHeart} className="iconeNav" />
